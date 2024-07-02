@@ -1,0 +1,19 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const people = await getCollection("people");
+---
+
+<Base title="People">
+  <h1>People</h1>
+  <ul>
+    {
+      people.map((person) => (
+        <li>
+          <a href={`/people/${person.slug}/`}>{person.data.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

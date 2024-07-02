@@ -1,0 +1,22 @@
+---
+// This page generates each recipe
+// https://docs.astro.build/en/tutorials/add-content-collections/#generate-pages-from-a-collection
+
+import { getCollection } from "astro:content";
+import Recipe from "../../layouts/Person.astro";
+
+export async function getStaticPaths() {
+  const people = await getCollection("people");
+  return people.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Recipe frontmatter={entry.data}>
+  <Content />
+</Recipe>
