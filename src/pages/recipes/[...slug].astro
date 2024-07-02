@@ -3,7 +3,7 @@
 // https://docs.astro.build/en/tutorials/add-content-collections/#generate-pages-from-a-collection
 
 import { getCollection } from "astro:content";
-import Recipe from "../../layouts/Page.astro";
+import Recipe from "../../layouts/Recipe.astro";
 
 export async function getStaticPaths() {
   const recipes = await getCollection("recipes");

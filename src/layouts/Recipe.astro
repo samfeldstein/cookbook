@@ -1,0 +1,16 @@
+---
+import Base from "./Base.astro";
+import Tags from "../components/Tags.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Base title={frontmatter.key || frontmatter.title}>
+  <article>
+    <header aria-label="Page Header">
+      <h1>{frontmatter.title}</h1>
+      <Tags tags={frontmatter.tags} />
+    </header>
+    <slot />
+  </article>
+</Base>

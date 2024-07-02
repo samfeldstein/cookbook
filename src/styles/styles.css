@@ -82,6 +82,10 @@ body {
   }
 }
 
+h1 {
+  font-size: 2.75rem;
+}
+
 a {
   color: var(--color-2);
   text-underline-offset: 0.2em;

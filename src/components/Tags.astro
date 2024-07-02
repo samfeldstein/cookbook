@@ -1,0 +1,21 @@
+---
+const { tags } = Astro.props;
+---
+
+  {
+    tags.map((tag) => (
+        <a class="tag" href={`/tags/${tag}`}>#{tag}</a>
+    ))
+  }
+
+<style type="scss">
+  .tag {
+    text-decoration: unset;
+    font-variant: unset;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+</style>
