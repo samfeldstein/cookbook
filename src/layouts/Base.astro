@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import Navigation from "../components/Navigation.astro";
 import Skiplink from "../components/Skiplink.astro";
 
 const { title } = Astro.props;
@@ -10,6 +11,11 @@ const { title } = Astro.props;
   <BaseHead title={title} />
   <body>
     <Skiplink />
-    <slot />
+    <header aria-label="Site Header">
+      <Navigation />
+    </header>
+    <main>
+      <slot />
+    </main>
   </body>
 </html>

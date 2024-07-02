@@ -4,8 +4,7 @@ import Base from "../layouts/Base.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Base title={frontmatter.title}>
+<Base title={frontmatter.key || frontmatter.title}>
   <h1>{frontmatter.title}</h1>
   <slot />
-  <Base />
 </Base>
