@@ -2,14 +2,24 @@
 const { tags } = Astro.props;
 ---
 
+  <ul>
   {
     tags.map((tag) => (
-        <a class="tag" href={`/tags/${tag}`}>#{tag}</a>
+        <li><a class="tag" href={`/tags/${tag}`}>#{tag}</a></li>
     ))
   }
+  </ul>
 
 <style type="scss">
-  .tag {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  a {
     text-decoration: unset;
     font-variant: unset;
 
