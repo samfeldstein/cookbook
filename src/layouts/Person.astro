@@ -1,10 +1,57 @@
 ---
 import Base from "./Base.astro";
 
-const { frontmatter } = Astro.props;
+const { name, family } = Astro.props;
 ---
 
-<Base title={frontmatter.name}>
-  <h1>{frontmatter.name}</h1>
+<Base title={name}>
+  <h1>{name}</h1>
+  <p>Parents:</p>
+  <ul>
+    {family.parents.map((parent) => {
+      const slug = parent.toLowerCase().replace(" ", "-");
+      return (
+        <li>
+          <a href={`/people/${slug}`}>{parent}</a>
+        </li>
+      );
+    })}
+  </ul>
+
+  {
+    family.siblings && (
+      <>
+        <p>Siblings:</p>
+        <ul>
+          {family.siblings.map((sibling) => {
+            const slug = sibling.toLowerCase().replace(" ", "-");
+            return (
+              <li>
+                <a href={`/people/${slug}`}>{sibling}</a>
+              </li>
+            );
+          })}
+        </ul>
+      </>
+    )
+  }
+
+{
+  family.children && (
+    <>
+      <p>Children:</p>
+      <ul>
+        {family.children.map((child) => {
+          const slug = child.toLowerCase().replace(" ", "-");
+          return (
+            <li>
+              <a href={`/people/${slug}`}>{child}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  )
+}
   <slot />
 </Base>

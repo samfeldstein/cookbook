@@ -1,0 +1,11 @@
+---
+import Person from "../../layouts/Person.astro";
+
+const name = "Anna Feldstein";
+const family = {
+  parents: ["Sondra Feldstein", "Stuart Feldstein"],
+  siblings: ["Sam Feldstein", "Anna Feldstein"],
+};
+---
+
+<Person name={name} family={family} />
