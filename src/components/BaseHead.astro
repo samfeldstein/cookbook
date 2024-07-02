@@ -1,0 +1,30 @@
+---
+const { title } = Astro.props;
+---
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Icons
+      - https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
+      - Favicon generator: https://realfavicongenerator.net/
+      - SVG generator: https://formito.com/tools/favicon
+      - Image compressor: https://squoosh.app/
+      - SVG optimizer: https://jakearchibald.github.io/svgomg/
+      - Favicon checker: https://realfavicongenerator.net/favicon_checker  
+    -->
+    <!-- <Favicon /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Family Website</title>
+    <meta name="description" content="A website for our family." />
+    <!-- <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Our Family Website"
+      href={new URL("feed.xml", Astro.site)}
+    />
+    <script>
+      import "../scripts/swRegister.js";
+    </script> -->
+  </head>
