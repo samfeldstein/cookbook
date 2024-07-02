@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+}
+
+body {
+  min-height: 100vh;
+  font-weight: 400;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+img,
+figure,
+picture {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+  --font-body: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --font-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --color-2: #184dc9;
+  --color-3: #adff2f;
+}
+
+a, h2 {
+  font-variant: small-caps;
+}
+
+body {
+  max-width: 50rem;
+  /* Base size set in _reset.scss */
+  font-size: 1.25rem;
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000;
+    color: #bebebe;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  main p {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+a {
+  color: var(--color-2);
+  text-underline-offset: 0.2em;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--color-3);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
