@@ -1,3 +1,9 @@
 {
-  "extends": "astro/tsconfigs/base"
+  "extends": "astro/tsconfigs/base",
+  // Needed for collections
+  // https://docs.astro.build/en/tutorials/add-content-collections/#upgrade-dependencies
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "allowJs": true
+  }
 }

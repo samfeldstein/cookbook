@@ -1,0 +1,20 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const recipes = await getCollection("recipes");
+---
+
+<Base title="Cookbook">
+  <h1>Cookbook</h1>
+  <ul>
+    {
+      recipes.map((recipe) => (
+        <li>
+          <a href={`/recipes/${recipe.slug}/`}>{recipe.data.title}</a>
+        </li>
+        
+      ))
+    }
+  </ul>
+</Base>
