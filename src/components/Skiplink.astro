@@ -1,0 +1,20 @@
+<a href="#main-content" id="skiplink">Skip to Content</a>
+
+<style>
+  #skiplink {
+    position: absolute;
+    top: -100%;
+    border: 0.1rem solid;
+    padding: 0.25rem 1rem;
+    background-color: white;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: black;
+    }
+  }
+
+  #skiplink:active,
+  #skiplink:focus {
+    top: unset;
+  }
+</style>

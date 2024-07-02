@@ -1,13 +1,15 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import Skiplink from "../components/Skiplink.astro";
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<BaseHead title={title} />
-<body>
+  <BaseHead title={title} />
+  <body>
+    <Skiplink />
     <slot />
-</body>
+  </body>
 </html>
