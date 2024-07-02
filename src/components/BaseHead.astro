@@ -1,6 +1,7 @@
 ---
-// Styles
-import "../styles.css";
+import Favicon from "./Favicon.astro";
+
+import "../styles/styles.css";
 
 const { title } = Astro.props;
 ---
@@ -16,7 +17,7 @@ const { title } = Astro.props;
       - SVG optimizer: https://jakearchibald.github.io/svgomg/
       - Favicon checker: https://realfavicongenerator.net/favicon_checker  
     -->
-    <!-- <Favicon /> -->
+    <Favicon />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Family Website</title>
