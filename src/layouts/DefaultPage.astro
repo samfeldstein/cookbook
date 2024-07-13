@@ -9,6 +9,8 @@ const { title, description, frontmatter } = Astro.props;
   title={title || frontmatter.key || frontmatter.title}
   description={description || frontmatter.description}
 >
-  <h1>{title || frontmatter.title}</h1>
-  <slot />
+  <header id="page-header">
+    <h1>{title || frontmatter.title}</h1>
+    <slot />
+  </header>
 </BaseLayout>

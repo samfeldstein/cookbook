@@ -7,11 +7,10 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout title={frontmatter.title} description={frontmatter.description}>
   <article>
-    <header aria-label="Page Header">
+    <header id="page-header" aria-label="Page Header">
       <h1>{frontmatter.title}</h1>
       <Tags tags={frontmatter.tags} />
     </header>
-    <hr>
     <slot />
   </article>
 </BaseLayout>
