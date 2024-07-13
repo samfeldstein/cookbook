@@ -13,6 +13,7 @@
     "astro": "^4.11.3"
   },
   "devDependencies": {
+    "@divriots/jampack": "^0.24.4",
     "cssnano": "^7.0.4"
   }
 }
