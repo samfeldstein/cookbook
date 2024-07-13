@@ -1,15 +1,18 @@
 {
-  "name": "",
+  "name": "our-family-website",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && npx @divriots/jampack ./dist",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^4.11.3"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.4"
   }
 }
