@@ -14,7 +14,8 @@ const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
 ---
 
 <BaseLayout title="tags">
-    <Tags tags={tags} />
+  <h1>#tags</h1>  
+  <Tags tags={tags} />
 </BaseLayout>
 
 <style is:global type="scss">

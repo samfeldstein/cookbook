@@ -2,13 +2,13 @@
 // Layout
 import BaseLayout from "./BaseLayout.astro";
 
-const { frontmatter } = Astro.props;
+const { title, description, frontmatter } = Astro.props;
 ---
 
 <BaseLayout
-  title={frontmatter.key || frontmatter.title}
-  description={frontmatter.description}
+  title={title || frontmatter.key || frontmatter.title}
+  description={description || frontmatter.description}
 >
-  <h1>{frontmatter.title}</h1>
+  <h1>{title || frontmatter.title}</h1>
   <slot />
 </BaseLayout>

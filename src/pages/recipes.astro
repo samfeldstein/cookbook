@@ -1,11 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import DefaultPage from "../layouts/DefaultPage.astro";
 import { getCollection } from "astro:content";
 
 const recipes = await getCollection("recipes");
 ---
 
-<BaseLayout title="Cookbook" description="Our family cookbook.">
+<DefaultPage title="Cookbook" description="Our family cookbook.">
   <ul>
     {
       recipes.map((recipe) => (
@@ -16,4 +16,4 @@ const recipes = await getCollection("recipes");
       ))
     }
   </ul>
-</BaseLayout>
+</DefaultPage>

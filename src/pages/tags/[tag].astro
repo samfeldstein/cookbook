@@ -10,36 +10,40 @@ import { sortCollectionByDate } from "../../scripts/utils";
 
 // Functions
 export async function getStaticPaths() {
-  const posts = await getCollection("recipes");
-  const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+  const recipes = await getCollection("recipes");
+  const uniqueTags = [
+    ...new Set(recipes.map((recipe) => recipe.data.tags).flat()),
+  ];
 
   return uniqueTags.map((tag) => {
-    const filteredPosts = posts.filter((post) => post.data.tags.includes(tag));
+    const filteredPosts = recipes.filter((recipe) =>
+      recipe.data.tags.includes(tag)
+    );
     return {
       params: { tag },
-      props: { posts: filteredPosts },
+      props: { recipes: filteredPosts },
     };
   });
 }
 
 // Variables
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { recipes } = Astro.props;
 const title = `#${tag}`;
 
 // Calls
-sortCollectionByDate(posts);
+sortCollectionByDate(recipes);
 ---
 
 <BaseLayout title={title}>
+  <h1>{title}</h1>
   <ul>
     {
-      posts.map((post) => (
+      recipes.map((recipe) => (
         <li>
-          <a href={`/recipes/${post.slug}/`}>{post.data.title}</a>
+          <a href={`/recipes/${recipe.slug}/`}>{recipe.data.title}</a>
         </li>
       ))
     }
   </ul>
-</MainContent>
 </BaseLayout>
