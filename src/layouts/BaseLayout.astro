@@ -1,14 +1,14 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Navigation from "../components/Navigation.astro";
 import Skiplink from "../components/Skiplink.astro";
+import Navigation from "../components/Navigation.astro";
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <BaseHead title={title} />
+  <BaseHead title={title} description={description} />
   <body>
     <Skiplink />
     <header aria-label="Site Header">
