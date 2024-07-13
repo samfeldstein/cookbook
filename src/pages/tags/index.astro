@@ -15,23 +15,7 @@ const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
 
 <BaseLayout title="tags">
   <header id="page-header">
-  <h1>#tags</h1>  
-</header>
+    <h1>#tags</h1>
+  </header>
   <Tags tags={tags} />
 </BaseLayout>
-
-<style is:global type="scss">
-  .tags {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-
-    a {
-      font-variant: unset;
-      text-transform: lowercase;
-    }
-  }
-</style>

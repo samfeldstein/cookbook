@@ -29,6 +29,14 @@ a {
     }
 }
 
+#site-logo {
+    @include font-size(2rem);
+    font: {
+        variant: small-caps;
+        weight: bold;
+    }
+}
+
 #site-header {
     margin-bottom: 1rem;
 }
