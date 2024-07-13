@@ -1,3 +1,14 @@
 @use "reset";
 
 // Only include styles that apply to *every* page.
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: #1f1f1f;
+        color: #dddddd;
+    }
+
+    a {
+        color: yellowgreen;
+    }
+}

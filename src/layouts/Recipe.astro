@@ -1,11 +1,11 @@
 ---
-import Base from "./BaseLayout.astro";
+import BaseLayout from "./BaseLayout.astro";
 import Tags from "../components/Tags.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<Base title={frontmatter.key || frontmatter.title}>
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
   <article>
     <header aria-label="Page Header">
       <h1>{frontmatter.title}</h1>
@@ -14,7 +14,7 @@ const { frontmatter } = Astro.props;
     <hr>
     <slot />
   </article>
-</Base>
+</BaseLayout>
 
 <style>
   h1 {

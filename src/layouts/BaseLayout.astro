@@ -8,7 +8,10 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-  <BaseHead title={title} description={description} />
+  <BaseHead
+    title={title}
+    description={description}
+  />
   <body>
     <Skiplink />
     <header id="site-header" aria-label="Site Header">

@@ -1,0 +1,34 @@
+---
+// Layout
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+// Components
+import Tags from "../../components/Tags.astro";
+
+// Collections
+import { getCollection } from "astro:content";
+
+// Variables
+const posts = await getCollection("recipes");
+const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
+---
+
+<BaseLayout title="tags">
+    <Tags tags={tags} />
+</BaseLayout>
+
+<style is:global type="scss">
+  .tags {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    a {
+      font-variant: unset;
+      text-transform: lowercase;
+    }
+  }
+</style>

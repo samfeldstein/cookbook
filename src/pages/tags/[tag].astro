@@ -1,0 +1,45 @@
+---
+// Layout
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+// Collections
+import { getCollection } from "astro:content";
+
+// Utils
+import { sortCollectionByDate } from "../../scripts/utils";
+
+// Functions
+export async function getStaticPaths() {
+  const posts = await getCollection("recipes");
+  const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = posts.filter((post) => post.data.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+// Variables
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const title = `#${tag}`;
+
+// Calls
+sortCollectionByDate(posts);
+---
+
+<BaseLayout title={title}>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/recipes/${post.slug}/`}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</MainContent>
+</BaseLayout>

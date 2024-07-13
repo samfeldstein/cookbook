@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/Page.astro"
+layout: "../layouts/DefaultPage.astro"
 title: Welcome to our family website, the website for our family
 key: Home
 ---
