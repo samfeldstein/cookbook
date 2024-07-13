@@ -1,6 +1,11 @@
 @use "reset";
+@import "../node_modules/rfs/scss";
 
 // Only include styles that apply to *every* page.
+
+body {
+    @include font-size(1.25rem);
+}
 
 @media (prefers-color-scheme: dark) {
     html {
