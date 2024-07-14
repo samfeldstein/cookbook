@@ -10,6 +10,11 @@ const { frontmatter } = Astro.props;
     <header id="page-header" aria-label="Page Header">
       <h1>{frontmatter.title}</h1>
       <Tags tags={frontmatter.tags} />
+      {
+        frontmatter.source && (
+          <a href={frontmatter.source}>{frontmatter.source}</a>
+        )
+      }
     </header>
     <slot />
   </article>

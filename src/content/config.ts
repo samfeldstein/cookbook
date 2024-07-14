@@ -7,6 +7,7 @@ const recipes = defineCollection({
   schema: z.object({
     title: z.string(),
     author: z.string(),
+    source: z.string(),
     tags: z.array(z.string()),
   }),
 });
