@@ -11,16 +11,18 @@ html {
 }
 
 body {
-    @include font-size(1.25rem);
     max-width: 50rem;
     margin: 0 auto;
     padding: 0.5rem;
+    // This mixin includes nested rules. Sass throws an error on declaration that follow nested rules, so I moved it to the bottom.
+    @include font-size(1.25rem);
 }
 
 h1 {
-    @include font-size(5rem);
     font-variant: small-caps;
     margin-bottom: 0;
+
+    @include font-size(5rem);
 }
 
 a {
@@ -29,28 +31,23 @@ a {
     &:hover {
         text-decoration: none;
     }
-    
+
     @media (prefers-color-scheme: dark) {
         color: yellowgreen;
     }
 }
 
 #site-logo {
-    @include font-size(3rem);
-
-    font: {
-        variant: small-caps;
-        weight: bold;
-    }
+    font-variant: small-caps;
+    font-weight: bold;
 
     text-decoration: none;
 
-    &:hover {
-        text-decoration: {
-            line: underline;
-            thickness: 0.05em;
-        }
+    @include font-size(3rem);
 
+    &:hover {
+        text-decoration-line: underline;
+        text-decoration-thickness: 0.05em;
         text-underline-offset: .25em;
     }
 }
