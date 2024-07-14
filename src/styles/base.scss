@@ -36,6 +36,7 @@ h1 {
 h2 {
     font-variant: small-caps;
     text-align: right;
+
     border: {
         bottom: {
             style: solid;
@@ -50,8 +51,10 @@ h3 {
 
 a {
     font-variant: small-caps;
+    color: #184dc9;
 
-    &:hover {
+    &:hover,
+    &:focus {
         text-decoration: none;
     }
 
@@ -68,7 +71,8 @@ a {
 
     @include font-size(3rem);
 
-    &:hover {
+    &:hover,
+    &:focus {
         text-decoration-line: underline;
         text-decoration-thickness: 0.05em;
         text-underline-offset: .25em;
