@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+
+const { collectionName } = Astro.props;
+const collection = await getCollection(collectionName);
+---
+
+<ul>
+  {
+    collection.map((item) => (
+      <li>
+        <a href={`/${collectionName}/${item.slug}/`}>{item.data.title}</a>
+      </li>
+    ))
+  }
+</ul>

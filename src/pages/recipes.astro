@@ -1,12 +1,15 @@
 ---
 import DefaultPage from "../layouts/DefaultPage.astro";
-import { getCollection } from "astro:content";
+import CollectionList from "../components/CollectionList.astro";
+// import { getCollection } from "astro:content";
 
-const recipes = await getCollection("recipes");
+// const {collection} = Astro.props;
+
+// const recipes = await getCollection(`${collection}`);
 ---
 
 <DefaultPage title="Cookbook" description="Our family cookbook.">
-  <ul>
+  <!-- <ul>
     {
       recipes.map((recipe) => (
         <li>
@@ -15,5 +18,7 @@ const recipes = await getCollection("recipes");
         
       ))
     }
-  </ul>
+  </ul> -->
+<CollectionList collectionName="recipes"/>
+
 </DefaultPage>
