@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
   <article>
     <header id="page-header" aria-label="Page Header">
       <h1>{frontmatter.title}</h1>
-      <Tags tags={frontmatter.tags} />
+      <Tags tags={frontmatter.tags} path="recipes" />
       {
         frontmatter.source && (
           <a href={frontmatter.source}>{frontmatter.source}</a>
