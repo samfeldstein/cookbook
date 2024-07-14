@@ -1,6 +1,6 @@
 ---
 title: Challah
-author: Sam Feldstein
+from: Sondra Feldstein
 source: ""
 tags: ["bread", "jewish"]
 ---

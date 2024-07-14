@@ -18,22 +18,40 @@ body {
 }
 
 h1 {
-    @include font-size(4rem);
+    @include font-size(5rem);
     font-variant: small-caps;
-    margin: 0;
+    margin-bottom: 0;
 }
 
 a {
+    font-variant: small-caps;
+
+    &:hover {
+        text-decoration: none;
+    }
+    
     @media (prefers-color-scheme: dark) {
         color: yellowgreen;
     }
 }
 
 #site-logo {
-    @include font-size(2rem);
+    @include font-size(3rem);
+
     font: {
         variant: small-caps;
         weight: bold;
+    }
+
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: {
+            line: underline;
+            thickness: 0.05em;
+        }
+
+        text-underline-offset: .25em;
     }
 }
 
