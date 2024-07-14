@@ -23,14 +23,14 @@ const { frontmatter } = Astro.props;
   <section>
     <h2>Recently Added</h2>
     <ol>
-    <a href={`/recipes/${recipes[0].slug}`}>{recipes[0].data.title}</a>
-    <a href={`/recipes/${recipes[1].slug}`}>{recipes[1].data.title}</a>
-    <a href={`/recipes/${recipes[2].slug}`}>{recipes[2].data.title}</a>
-  </ol>
+      <a href={`/recipes/${recipes[0].slug}`}>{recipes[0].data.title}</a>
+      <a href={`/recipes/${recipes[1].slug}`}>{recipes[1].data.title}</a>
+      <a href={`/recipes/${recipes[2].slug}`}>{recipes[2].data.title}</a>
+    </ol>
   </section>
   <section>
     <h2>Categories</h2>
-    <Tags tags={tags} path="recipes" />
+    <Tags tags={tags.sort()} path="recipes" />
   </section>
 </BaseLayout>
 
