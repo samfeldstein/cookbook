@@ -1,5 +1,6 @@
 ---
 title: Blueberry Streusel Coffee Cake
+pubDate: 2024-07-13
 source: ""
 tags: ["breakfast", "coffee-cake", "desserts"]
 ---

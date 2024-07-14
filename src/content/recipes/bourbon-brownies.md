@@ -1,5 +1,6 @@
 ---
 title: Bourbon Brownies
+pubDate: 2024-07-13
 source: ""
 tags: ["brownies", "desserts"]
 ---

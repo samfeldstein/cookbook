@@ -1,5 +1,6 @@
 ---
 title: Challah
+pubDate: 2024-07-13
 source: ""
 tags: ["bread", "jewish"]
 ---
