@@ -1,9 +1,10 @@
 ---
 title: Blueberry Streusel Coffee Cake
-from: Sondra Feldstein
 source: ""
 tags: ["breakfast", "coffee-cake", "desserts"]
 ---
+
+*Sondra's recipe.*
 
 ## Ingredients
 

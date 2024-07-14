@@ -1,9 +1,10 @@
 ---
 title: Challah
-from: Sondra Feldstein
 source: ""
 tags: ["bread", "jewish"]
 ---
+
+*Sondra's recipe.*
 
 ## Ingredients
 
@@ -17,7 +18,7 @@ tags: ["bread", "jewish"]
 
 ## Directions
 
-1. Stir together brown sugar, salt, yeast, and water. Let sit few minutes til foamy.
+1. Stir together brown sugar, salt, yeast, and water. Let sit a few minutes till foamy.
 2. Add eggs, olive oil, and flour.
-3. Knead several minutes til smooth and soft. Electric mixer works best.
+3. Knead several minutes till smooth and soft. Electric mixer works best.
 4. Let rise till doubled (about 1 hour), shape, let rise 30 minutes, bake.

@@ -1,11 +1,10 @@
 ---
 title: Bourbon Brownies
-from: Sondra Feldstein
 source: ""
 tags: ["brownies", "desserts"]
 ---
 
-**Time:** 2 hrs
+*Sondra's recipe.*
 
 ## Ingredients
 
@@ -13,7 +12,7 @@ tags: ["brownies", "desserts"]
 
 - 12 T butter
 - 1 1/2 c sugar
-- 3.5 oz 85% cocoa chocolate bar. [Try taza.]
+- 3.5 oz 85% cocoa chocolate bar.
 - 6 T bourbon
 - 4 eggs
 - 1 c flour
@@ -34,11 +33,11 @@ tags: ["brownies", "desserts"]
 3. Blend in sugar and bourbon.
 4. Add eggs and blend till velvety. (Use mixer.)
 5. Add flour and salt, stir to combine.
-6. Add some choc chips into the batter. Whatever looks yummy.
-7. Pour into greased 9x13 pan and bake at 350 for 25-30 mins, till toothpick inserted in the middle comes out with moist crumbs. [Testing time and temp. May need to adjust.]
+6. Add chocolate chips. Whatever looks yummy.
+7. Pour into greased 9x13 pan and bake at 350 for 25-30 mins, till toothpick inserted in the middle comes out with moist crumbs.
 8. Make frosting.
 9. Remove brownies from oven. Pour bourbon over top. Let cool completely.
-10. Frost those fuckers.
+10. Frost.
 11. Chill em so they set up properly. Serve at room temp.
 
 ### Frosting
