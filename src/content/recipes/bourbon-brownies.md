@@ -24,8 +24,6 @@ tags: ["brownies", "desserts"]
 - 1/4 c chocolate chips
 - 3 T heavy cream
 
----
-
 ## Directions
 
 1. Preheat oven to 325.

@@ -11,11 +11,19 @@ html {
 }
 
 body {
+    font-size: 1.25rem;
     max-width: 50rem;
     margin: 0 auto;
     padding: 0.5rem;
-    // This mixin includes nested rules. Sass throws an error on declaration that follow nested rules, so I moved it to the bottom.
-    @include font-size(1.25rem);
+}
+
+main {
+
+    p,
+    ul,
+    ol {
+        line-height: 1.4;
+    }
 }
 
 h1 {
@@ -23,6 +31,21 @@ h1 {
     margin-bottom: 0;
 
     @include font-size(5rem);
+}
+
+h2 {
+    font-variant: small-caps;
+    text-align: right;
+    border: {
+        bottom: {
+            style: solid;
+            width: 0.05em;
+        }
+    }
+}
+
+h3 {
+    font-variant: small-caps;
 }
 
 a {

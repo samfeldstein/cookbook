@@ -2,13 +2,17 @@
 const { tags, path } = Astro.props;
 ---
 
-  <ul>
+<ul>
   {
     tags.map((tag) => (
-        <li><a class="tag" href={`/${path}/tags/${tag}`}>#{tag}</a></li>
+      <li>
+        <a class="tag" href={`/${path}/tags/${tag}`}>
+          #{tag}
+        </a>
+      </li>
     ))
   }
-  </ul>
+</ul>
 
 <style type="scss">
   ul {
@@ -19,10 +23,16 @@ const { tags, path } = Astro.props;
     gap: 1rem;
     flex-wrap: wrap;
   }
-  
+
   a {
     text-decoration: unset;
+
+    /* https://modernfontstacks.com */
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+      Consolas, "DejaVu Sans Mono", monospace;
+
     font-variant: unset;
+    font-size: 1rem;
 
     &:hover,
     &:focus {
