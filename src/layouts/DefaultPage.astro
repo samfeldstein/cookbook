@@ -1,6 +1,7 @@
 ---
 // Layout
 import BaseLayout from "./BaseLayout.astro";
+import CollectionList from "../components/CollectionList.astro";
 
 const { title, description, frontmatter } = Astro.props;
 ---
@@ -11,6 +12,11 @@ const { title, description, frontmatter } = Astro.props;
 >
   <header id="page-header">
     <h1>{title || frontmatter.title}</h1>
-    <slot />
   </header>
+  <slot />
+  {
+    frontmatter.listPage && (
+      <CollectionList collectionName={frontmatter.collection} />
+    )
+  }
 </BaseLayout>
