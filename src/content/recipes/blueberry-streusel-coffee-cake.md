@@ -11,21 +11,21 @@ tags: ["breakfast", "coffee-cake", "desserts"]
 
 ### Streusel Ingredients
 
-- 1/2 cup sugar
-- 1/3 cup flour
-- 1/4 cup cold butter
+- 1/2 c sugar
+- 1/3 c flour
+- 1/4 c cold butter
 
 ### Batter Ingredients
 
-- 2 cups flour
-- 3/4 cup sugar
+- 2 c flour
+- 3/4 c sugar
 - 2 teaspoons baking powder
 - 1/4 teaspoon salt
 - 1 egg, beaten
-- 1/2 cup milk
-- 1/2 cup butter, softened
-- 1 cup blueberries
-- 1 cup chopped pecans
+- 1/2 c milk
+- 1/2 c butter, softened
+- 1 c blueberries
+- 1 c chopped pecans
 
 ## Directions
 

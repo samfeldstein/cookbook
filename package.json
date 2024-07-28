@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "open http://localhost:4321/ -a 'Google Chrome' && astro dev",
     "build": "astro build && npx @divriots/jampack ./dist",
     "preview": "astro preview",
     "astro": "astro"

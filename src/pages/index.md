@@ -4,7 +4,7 @@ title: Welcome to our family website, the website for our family
 key: Home
 ---
 
-Hi. I (Sam Feldstein) thought it'd be nice to have a website where we collect family updates, history, and recipes. As you can see, this is a very barebones operation at the moment, but I figured it was best to just get it up and running. Everything else in time.
+Hi. I thought it'd be nice to have a website where we collect family updates, history, and recipes. As you can see, this is a very barebones operation at the moment, but I figured it was best to just get it up and running. Everything else in time.
 
 ## Ideas for the site
 

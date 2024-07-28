@@ -9,13 +9,13 @@ tags: ["bread", "jewish"]
 
 ## Ingredients
 
-- 1/2 cup brown sugar
-- 1 tablespoon salt
-- 1 1/2 tablespoons yeast
-- 1 1/2 cups warm water (microwave 30 seconds)
+- 1/2 c brown sugar
+- 1 T salt
+- 1 1/2 T yeast
+- 1 1/2 c warm water (microwave 30 seconds)
 - 4 eggs
-- 1/2 cup olive oil
-- 7 cups flour
+- 1/2 c olive oil
+- 7 c flour
 
 ## Directions
 
