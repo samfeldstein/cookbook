@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "open -na 'Firefox Developer Edition' --args --private-window http://localhost:4321/ && astro dev",
-    "build": "astro build && npx @divriots/jampack ./dist",
+    "build": "rm -r dist && astro build && npx @divriots/jampack ./dist",
     "preview": "astro preview",
     "astro": "astro"
   },

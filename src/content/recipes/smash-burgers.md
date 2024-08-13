@@ -2,6 +2,7 @@
 title: Smash Burgers
 pubDate: 2024-08-06
 source: ""
+tags: [beef]
 ---
 
 *Original recipe from [Natasha's Kitchen](https://natashaskitchen.com/smash-burger-recipe/).*
