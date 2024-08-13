@@ -2,8 +2,7 @@
 title: Fried Okra
 pubDate: 2024-08-07
 source: ""
-tags:
-  - veggies
+tags: ["veggies"]
 ---
 
 *Sondra's recipe.*

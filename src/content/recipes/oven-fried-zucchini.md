@@ -2,9 +2,7 @@
 title: Oven-fried Zucchini
 pubDate: 2024-08-07
 source: ""
-tags:
-  - squash
-  - veggies
+tags: ["squash", "veggies"]
 ---
 
 ## Ingredients
