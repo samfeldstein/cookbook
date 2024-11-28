@@ -13,7 +13,7 @@ sortCollectionByDate(recipes);
 const tags = [...new Set(recipes.map((recipe) => recipe.data.tags).flat())];
 ---
 
-<Base>
+<Base title="Recipes">
   <h1>Recipes</h1>
   <section>
     <h2>Recently Added</h2>
@@ -30,10 +30,28 @@ const tags = [...new Set(recipes.map((recipe) => recipe.data.tags).flat())];
 </Base>
 
 <style>
+  h1 {
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 0;
+  }
+
   ol {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+</style>
+
+<style is:global>
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 </style>
