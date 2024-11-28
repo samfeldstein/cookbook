@@ -1,20 +1,20 @@
-<a href="#main-content" id="skiplink">Skip to Content</a>
+<a href="#main-content">Skip to Content</a>
 
-<style type="scss">
-  #skiplink {
+<style>
+  a {
     position: absolute;
-    top: -100%;
+    translate: -1000%;
     border: 0.1rem solid;
     padding: 0.25rem 1rem;
     background-color: white;
-
-    &:active,
-    &:focus {
-      top: unset;
-    }
+    transition-duration: 0.25s;
 
     @media (prefers-color-scheme: dark) {
       background-color: black;
     }
+  }
+
+  a:focus {
+    translate: 0;
   }
 </style>

@@ -1,12 +1,9 @@
 ---
-// Components
-import Favicon from "./Favicon.astro";
-
 // Data
 import { site } from "../../config.mjs";
 
 // Styles
-import "../styles/base.scss";
+import "../styles/global.css";
 
 const { title, description } = Astro.props;
 ---
@@ -14,6 +11,7 @@ const { title, description } = Astro.props;
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
   <!-- Icons
       - https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
       - Favicon generator: https://realfavicongenerator.net/
@@ -22,18 +20,20 @@ const { title, description } = Astro.props;
       - SVG optimizer: https://jakearchibald.github.io/svgomg/
       - Favicon checker: https://realfavicongenerator.net/favicon_checker  
     -->
-  <Favicon />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content={Astro.generator} />
   <title>{title} | {site.title}</title>
   <meta name="description" content={description || site.description} />
   <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="Our Family Website"
-      href={new URL("feed.xml", Astro.site)}
-    />
-  <script>
-    import "../scripts/swRegister.js";
-  </script>
+    rel="alternate"
+    type="application/rss+xml"
+    title="Our Family Website"
+    href={new URL("feed.xml", Astro.site)}
+  />
 </head>

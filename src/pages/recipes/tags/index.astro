@@ -1,6 +1,6 @@
 ---
 // Layout
-import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Base from "../../../layouts/Base.astro";
 
 // Components
 import Tags from "../../../components/Tags.astro";
@@ -13,9 +13,9 @@ const recipes = await getCollection("recipes");
 const tags = [...new Set(recipes.map((recipe) => recipe.data.tags).flat())];
 ---
 
-<BaseLayout title="Recipe Tags">
+<Base title="Recipe Tags">
   <header id="page-header">
     <h1>Recipe Tags</h1>
   </header>
-  <Tags tags={tags} path="recipes"/>
-</BaseLayout>
+  <Tags tags={tags} path="recipes" />
+</Base>

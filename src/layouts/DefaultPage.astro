@@ -1,12 +1,12 @@
 ---
 // Layout
-import BaseLayout from "./BaseLayout.astro";
+import Base from "./Base.astro";
 import CollectionList from "../components/CollectionList.astro";
 
 const { title, description, frontmatter } = Astro.props;
 ---
 
-<BaseLayout
+<Base
   title={title || frontmatter.key || frontmatter.title}
   description={description || frontmatter.description}
 >
@@ -19,4 +19,4 @@ const { title, description, frontmatter } = Astro.props;
       <CollectionList collectionName={frontmatter.collection} />
     )
   }
-</BaseLayout>
+</Base>

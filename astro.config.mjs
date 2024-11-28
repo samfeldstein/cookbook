@@ -5,10 +5,5 @@ export default defineConfig({
   site: "https://ourfamilywebsite.netlify.app",
   prefetch: {
     prefetchAll: true,
-  },
-  vite: {
-    css: {
-      transformer: "sass",
-    },
-  },
+  }
 });

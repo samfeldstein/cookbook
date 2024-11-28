@@ -1,6 +1,6 @@
 ---
 // Layout
-import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Base from "../../../layouts/Base.astro";
 
 // Collections
 import { getCollection } from "astro:content";
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 
   return uniqueTags.map((tag) => {
     const filteredPosts = recipes.filter((recipe) =>
-      recipe.data.tags.includes(tag)
+      recipe.data.tags.includes(tag),
     );
     return {
       params: { tag },
@@ -35,7 +35,7 @@ const title = `#${tag}`;
 sortCollectionByDate(recipes);
 ---
 
-<BaseLayout title={title}>
+<Base title={title}>
   <header id="page-header">
     <h1>{title}</h1>
   </header>
@@ -48,4 +48,4 @@ sortCollectionByDate(recipes);
       ))
     }
   </ul>
-</BaseLayout>
+</Base>
