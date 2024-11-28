@@ -2,7 +2,7 @@
 title: Honey Lemonade
 pubDate: 2024-08-13
 source: "https://www.iowahoneyproducers.org/state-fair"
-tags: ["drinks", "lemonade"]
+tags: ["drinks"]
 ---
 
 ## Ingredients

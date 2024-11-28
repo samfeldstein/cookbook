@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "5th Grade Cursive";
+  src:
+    url("/fonts/5thGradeCursive.woff2") format("woff2"),
+    url("/fonts/5thGradeCursive.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

@@ -2,7 +2,7 @@
 title: Sticky Buns
 pubDate: 2024-07-28
 source: ""
-tags: ["bread", "breakfast", "cinnamon-rolls"]
+tags: ["bread", "breakfast"]
 ---
 
 ## Ingredients

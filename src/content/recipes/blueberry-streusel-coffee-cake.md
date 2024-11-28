@@ -2,10 +2,12 @@
 title: Blueberry Streusel Coffee Cake
 pubDate: 2024-07-13
 source: ""
-tags: ["breakfast", "coffee-cake", "desserts"]
+tags: ["breakfast", "desserts"]
 ---
 
 *Sondra's recipe.*
+
+<section>
 
 ## Ingredients
 
@@ -27,6 +29,10 @@ tags: ["breakfast", "coffee-cake", "desserts"]
 - 1 c blueberries
 - 1 c chopped pecans
 
+</section>
+
+<section>
+
 ## Directions
 
 ### Streusel
@@ -42,3 +48,5 @@ tags: ["breakfast", "coffee-cake", "desserts"]
 4. Spread into a greased 9-inch square pan.
 5. Sprinkle with streusel.
 6. Bake at 375 35-40 minutes.
+
+</section>

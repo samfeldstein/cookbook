@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props;
 
 <Base title={frontmatter.title} description={frontmatter.description}>
   <article>
-    <header id="page-header" aria-label="Page Header">
+    <header>
       <h1>{frontmatter.title}</h1>
       <Tags tags={frontmatter.tags} path="recipes" />
       {
@@ -19,3 +19,9 @@ const { frontmatter } = Astro.props;
     <slot />
   </article>
 </Base>
+
+<style is:global>
+  article section {
+    align-items: unset;
+  }
+</style>
