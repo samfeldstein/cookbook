@@ -7,6 +7,8 @@ tags: ["beef"]
 
 *Original recipe from [Natasha's Kitchen](https://natashaskitchen.com/smash-burger-recipe/).*
 
+<section>
+
 ## Ingredients
 
 - **Ground Beef** – We use 1.5 lbs of 80/20 beef to make 4 double-patty burgers, but you can easily scale the recipe up to feed a crowd (use 3 lbs for 8 double-patty burgers).
@@ -21,6 +23,10 @@ tags: ["beef"]
 - **Tomatoes** – Select meaty and large-sized tomatoes for burgers and cut them into rings
 - **Red onion** – thinly sliced into rings
 
+</section>
+
+<section>
+
 ## Directions
 
 1. **Prepare Patties.** Divide 1 1/2 lbs of ground beef into 8 equal portions (3 oz each), cover, and refrigerate until ready to cook.
@@ -30,3 +36,5 @@ tags: ["beef"]
 5. **Top buns.** Place toppings on buns so you can add the burgers right from the grill.
 6. **Cook patties.** Increase to medium-high heat. Depending on your surface area, place 2 to 4 cold pieces of meat onto the hot surface. Working quickly, cover each piece with a sheet of parchment paper and smash each into a thin patty. Remove parchment paper, season with salt, pepper, and garlic powder, add a dab of sauce, and flip. Sear for 2 minutes on the first side and about a minute on the second side.
 7. **Add cheese.** Place a slice of cheese onto half of the patties and top with a second patty and remove from heat. Serve warm over toasted buns with toppings.
+
+</section>

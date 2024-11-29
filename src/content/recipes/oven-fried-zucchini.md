@@ -5,6 +5,8 @@ source: ""
 tags: ["squash", "veggies"]
 ---
 
+<section>
+
 ## Ingredients
 
 - Nonstick cooking spray or vegetable oil
@@ -17,6 +19,10 @@ tags: ["squash", "veggies"]
 - 1pound zucchini (about 2 medium)
 - Marinara or pizza sauce, for dipping (optional)
 
+</section>
+
+<section>
+
 ## Directions
 
  1. Adjust an oven rack to the top-third position and heat to 425 degrees. Line a sheet pan with parchment and coat with cooking spray.
@@ -24,3 +30,5 @@ tags: ["squash", "veggies"]
  3. Trim ends of zucchini and cut into ½-inch-thick slices. Arrange on the baking sheet in a single layer. Sprinkle lightly on one side with salt and let sit for a few minutes, then blot with a paper towel. Flip zucchini and repeat salting and blotting on the second side.
  4. Add a handful of zucchini slices to the beaten eggs, turning them a few times to coat. Transfer, one by one, to the panko mixture, allowing excess egg to drip back into the bowl. Turn zucchini a couple times in the panko, gently pressing the panko so it sticks. Return the coated zucchini to the baking sheet, evenly spaced apart. Repeat with the remaining zucchini slices until they’re all coated.
  5. Bake zucchini for 10 minutes. Remove from the oven and gently flip the zucchini with a spatula, then bake until lightly golden, 8 to 10 minutes. Transfer to a platter and serve with marinara sauce for dipping, if desired.
+
+</section>

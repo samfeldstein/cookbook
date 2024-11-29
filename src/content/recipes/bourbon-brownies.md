@@ -7,6 +7,8 @@ tags: ["brownies", "desserts"]
 
 *Sondra's recipe.*
 
+<section>
+
 ## Ingredients
 
 ### Batter Ingredients
@@ -24,6 +26,10 @@ tags: ["brownies", "desserts"]
 
 - 1/4 c chocolate chips
 - 3 T heavy cream
+
+</section>
+
+<section>
 
 ## Directions
 
@@ -44,3 +50,5 @@ tags: ["brownies", "desserts"]
 1. Melt chocolate.
 2. Add cream.
 3. Mix.
+
+</section>

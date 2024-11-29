@@ -5,6 +5,8 @@ source: ""
 tags: ["bread", "breakfast"]
 ---
 
+<section>
+
 ## Ingredients
 
 ### Dough
@@ -12,7 +14,7 @@ tags: ["bread", "breakfast"]
 - 1/2 c brown sugar
 - 1 T salt
 - 1 1/2 T yeast
-- 1 1/2 c warm water (microwave 30 seconds)
+- 1 1/2 c warm water (microwave ~35 seconds)
 - 4 eggs
 - 1/2 c olive oil
 - 7 c flour
@@ -22,6 +24,10 @@ tags: ["bread", "breakfast"]
 - 1 stick butter, softened
 - Corn syrup
 - Cinnamon-sugar
+
+</section>
+
+<section>
 
 ## Directions
 
@@ -37,3 +43,5 @@ tags: ["bread", "breakfast"]
 10. Place the rolls in the pan, cut side down.
 11. Let rise till doubled.
 12. Bake at 325 degrees for 20 minutes till nicely browned.
+
+</section>

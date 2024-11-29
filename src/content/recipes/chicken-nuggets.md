@@ -5,6 +5,8 @@ source: ""
 tags: ["chicken"]
 ---
 
+<section>
+
 ## Ingredients
 
 - 1 c flour
@@ -15,6 +17,9 @@ tags: ["chicken"]
 - 1/2 t pepper
 - 8 boneless skinless chicken breast halves
 - 2 T vegetable or olive oil
+</section>
+
+<section>
 
 ## Directions
 
@@ -23,3 +28,5 @@ tags: ["chicken"]
 3. Put chicken (a few pieces at a time) in the bag and shake to coat.
 4. Heat oil in a skillet.
 5. Cook chicken, turning frequently, until browned and juices run clear (about 6-8 minutes).
+
+</section>

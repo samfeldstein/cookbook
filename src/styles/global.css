@@ -13,14 +13,14 @@
 
 body {
     background-color: var(--background-color);
-    max-width: 50rem;
     margin: 0 auto;
     padding-bottom: 2rem;
     font-family: system-ui, serif;
     font-size: 1.25rem;
 }
 
-main, article {
+main,
+article {
     display: flex;
     flex-direction: column;
     gap: 2rem;

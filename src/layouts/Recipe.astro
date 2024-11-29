@@ -16,12 +16,22 @@ const { frontmatter } = Astro.props;
         )
       }
     </header>
-    <slot />
+    <div class="content">
+      <slot />
+    </div>
   </article>
 </Base>
 
 <style is:global>
   article section {
     align-items: unset;
+    flex: 1;
+    min-width: 25rem;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 </style>
