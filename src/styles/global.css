@@ -13,6 +13,7 @@
 
 body {
     background-color: var(--background-color);
+    max-width: 80rem;
     margin: 0 auto;
     padding-bottom: 2rem;
     font-family: system-ui, serif;
@@ -42,11 +43,11 @@ h2 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: calc(1rem + 5vw);
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: calc(1rem + 2vw);
 }
 
 a {

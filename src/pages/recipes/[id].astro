@@ -1,0 +1,67 @@
+---
+import Base from "../../layouts/Base.astro";
+
+import { getCollection } from "astro:content";
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const recipes = await getCollection("recipes");
+  return recipes.map((recipe) => ({
+    params: { id: recipe.id },
+    props: { recipe },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { recipe } = Astro.props;
+---
+
+<Base>
+  <h1>{recipe.data.title}</h1>
+  <div class="recipe">
+    {
+      recipe.data.ingredients && recipe.data.ingredients.length > 0 && (
+        <section class="ingredients">
+          <h2>Ingredients</h2>
+          <ul>
+            {recipe.data.ingredients.map((ingredient) => (
+              <li>{ingredient}</li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      recipe.data.directions &&
+        recipe.data.directions.sections &&
+        recipe.data.directions.sections.length > 0 && (
+          <section class="directions">
+            <h2>Directions</h2>
+            {recipe.data.directions.sections.map((section) => (
+              <div class="direction-section">
+                <h3>{section.title}</h3>
+                <ol>
+                  {section.steps.map((step) => (
+                    <li>{step}</li>
+                  ))}
+                </ol>
+              </div>
+            ))}
+          </section>
+        )
+    }
+  </div>
+</Base>
+
+<style>
+  .recipe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 800px) {
+    .recipe {
+      grid-template-columns: 1fr; /* Single column */
+    }
+  }
+</style>

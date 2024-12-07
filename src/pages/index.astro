@@ -1,31 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
-import Tags from "../components/Tags.astro";
-
-// Utils
-import { getCollection } from "astro:content";
-import { sortCollectionByDate } from "../scripts/utils";
-
-// Collections
-const recipes = await getCollection("recipes");
-sortCollectionByDate(recipes);
-const tags = [...new Set(recipes.map((recipe) => recipe.data.tags).flat())];
 ---
 
 <Base title="Home">
   <h1>Home</h1>
-  <section>
-    <h2>New Recipes</h2>
-    <ol>
-      <a href={`/recipes/${recipes[0].slug}`}>{recipes[0].data.title}</a>
-      <a href={`/recipes/${recipes[1].slug}`}>{recipes[1].data.title}</a>
-      <a href={`/recipes/${recipes[2].slug}`}>{recipes[2].data.title}</a>
-    </ol>
-  </section>
-  <section>
-    <h2>Categories</h2>
-    <Tags tags={tags.sort()} path="recipes" />
-  </section>
 </Base>
 
 <style>

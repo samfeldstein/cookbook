@@ -19,7 +19,7 @@ tags: ["bread", "breakfast"]
 - 1/2 c olive oil
 - 7 c flour
 
-### The good stuff
+### The Good Stuff
 
 - 1 stick butter, softened
 - Corn syrup
