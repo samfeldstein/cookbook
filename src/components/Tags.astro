@@ -1,35 +1,15 @@
 ---
-const { tags, path } = Astro.props;
+const { tags } = Astro.props;
 ---
 
-<ul>
+<ul class="tags">
   {
     tags.map((tag) => (
       <li>
-        <a class="tag" href={`/${path}/tags/${tag}`}>
+        <a class="tag" href={`/recipes/tags/${tag}`}>
           #{tag}
         </a>
       </li>
     ))
   }
 </ul>
-
-<style>
-  ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  ul a {
-    text-decoration: none;
-    font-style: italic;
-  }
-
-  ul a:hover, ul a:focus {
-    text-decoration: underline;
-  }
-</style>

@@ -1,51 +1,27 @@
 ---
 import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+// Fetch the recipes collection
+const recipes = await getCollection("recipes");
 ---
 
 <Base title="Home">
   <h1>Home</h1>
+  <ul>
+    {
+      recipes.map((recipe) => (
+        <li>
+          <a href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
 </Base>
 
 <style>
   h1 {
     position: absolute;
     translate: -1000%;
-  }
-
-  h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 0;
-  }
-
-  section {
-    gap: 4rem;
-  }
-
-  ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .more {
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    padding: 1em;
-    text-decoration: none;
-    text-align: center;
-    background-color: var(--link-color);
-    color: var(--background-color);
-  }
-
-  .more:hover,
-  .more:focus {
-    background-color: transparent;
-    color: var(--link-color);
   }
 </style>

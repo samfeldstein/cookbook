@@ -1,0 +1,54 @@
+---
+// Layout
+import Base from "../../../layouts/Base.astro";
+
+// Collections
+import { getCollection } from "astro:content";
+
+// Functions
+export async function getStaticPaths() {
+  const recipes = await getCollection("recipes");
+  const uniqueTags = [
+    ...new Set(recipes.map((recipe) => recipe.data.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = recipes.filter((recipe) =>
+      recipe.data.tags.includes(tag),
+    );
+    return {
+      params: { tag },
+      props: { recipes: filteredPosts },
+    };
+  });
+}
+
+// Variables
+const { tag } = Astro.params;
+const { recipes } = Astro.props;
+---
+
+<Base title={tag}>
+  <h1>{tag}</h1>
+  <ul>
+    {
+      recipes.map((recipe) => (
+        <li>
+          <a href={`/recipes/${recipe.id}/`}>{recipe.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <p>See <a href="/recipes/tags/">all tags</a>.</p>
+</Base>
+
+<style>
+  h1::before {
+    content: "#";
+  }
+
+  li {
+    padding: 05rem 0;
+  }
+</style>

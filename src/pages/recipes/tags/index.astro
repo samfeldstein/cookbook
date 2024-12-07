@@ -1,0 +1,30 @@
+---
+// Layout
+import Base from "../../../layouts/Base.astro";
+
+// Components
+import Tags from "../../../components/Tags.astro";
+
+// Collections
+import { getCollection } from "astro:content";
+
+// Variables
+const recipes = await getCollection("recipes");
+const tags = [...new Set(recipes.map((recipe) => recipe.data.tags).flat())];
+tags.sort();
+---
+
+<Base title="recipes Tags">
+  <h1>Tags</h1>
+  <Tags tags={tags} path="recipes" />
+</Base>
+
+<style is:global>
+  .tags {
+    list-style-type: none;
+  }
+  
+  .tags li {
+    padding: 0.5rem 0;
+  }
+</style>
