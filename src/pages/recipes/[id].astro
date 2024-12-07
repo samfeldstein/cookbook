@@ -16,6 +16,14 @@ const { recipe } = Astro.props;
 
 <Base>
   <h1>{recipe.data.title}</h1>
+  {
+    recipe.data.source && (
+      <p>
+        Source: <a href={recipe.data.source.url}> {recipe.data.source.name}</a>.
+      </p>
+    )
+  }
+
   <div class="recipe">
     {
       recipe.data.ingredients && (
