@@ -1,0 +1,59 @@
+{
+  "title": "Bourbon Brownies",
+  "tags": [
+    "brownies",
+    "desserts"
+  ],
+  "ingredients": {
+    "sections": [
+      {
+        "title": "Batter",
+        "ingredients": [
+          "12 T butter",
+          "1 1/2 c sugar",
+          "3.5 oz 85% cocoa chocolate bar",
+          "6 T bourbon",
+          "4 eggs",
+          "1 c flour",
+          "pinch salt",
+          "1 package chocolate chips"
+        ]
+      },
+      {
+        "title": "Frosting",
+        "ingredients": [
+          "1/4 c chocolate chips",
+          "3 T heavy cream"
+        ]
+      }
+    ]
+  },
+  "directions": {
+    "sections": [
+      {
+        "title": "Batter",
+        "steps": [
+          "Preheat oven to 325.",
+          "Melt butter on low heat, add chocolate and stir till melted together. Pour into a mixing bowl.",
+          "Blend in sugar and bourbon.",
+          "Add eggs and blend till velvety. (Use mixer.)",
+          "Add flour and salt, stir to combine.",
+          "Add chocolate chips. Whatever looks yummy.",
+          "Pour into greased 9x13 pan and bake at 350 for 25-30 mins, till toothpick inserted in the middle comes out with moist crumbs.",
+          "Make frosting.",
+          "Remove brownies from oven. Pour bourbon over top. Let cool completely.",
+          "Frost.",
+          "Chill em so they set up properly. Serve at room temp."
+        ]
+      },
+      {
+        "title": "Frosting",
+        "steps": [
+          "Melt chocolate.",
+          "Add cream.",
+          "Mix."
+        ]
+      }
+    ]
+  }
+}
