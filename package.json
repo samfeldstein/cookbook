@@ -5,12 +5,11 @@
   "scripts": {
     "dev": "astro dev",
     "start": "open -a 'Google Chrome' http://localhost:4321/ && astro dev",
-    "build": "rm -r dist && astro build && npx @divriots/jampack ./dist",
+    "build": "astro build && npx @divriots/jampack ./dist",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.7",
     "astro": "^4.11.3"
   },
   "devDependencies": {

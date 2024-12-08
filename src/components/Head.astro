@@ -30,10 +30,4 @@ const { title, description } = Astro.props;
   <meta name="generator" content={Astro.generator} />
   <title>{title} | {site.title}</title>
   <meta name="description" content={description || site.description} />
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="Our Family Website"
-    href={new URL("feed.xml", Astro.site)}
-  />
 </head>
