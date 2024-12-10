@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.11.3"
+    "astro": "^5.0.4"
   },
   "devDependencies": {
     "@divriots/jampack": "^0.24.4",
