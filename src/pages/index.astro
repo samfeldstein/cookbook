@@ -1,27 +1,53 @@
 ---
-import Base from "../layouts/Base.astro";
+import Head from "../components/Head.astro";
+import { site } from "../../config.mjs";
 import { getCollection } from "astro:content";
 
 // Fetch the recipes collection
 const recipes = await getCollection("recipes");
 ---
 
-<Base title="Home">
-  <h1>Home</h1>
-  <ul>
-    {
-      recipes.map((recipe) => (
-        <li>
-          <a href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
-        </li>
-      ))
-    }
-  </ul>
-</Base>
+<Head title="Home" description={site.description} />
+
+<html lang="en">
+  <body>
+    <main>
+      <div class="pages">
+        <div class="cover page">
+          <h1>Family<br />Cookbook</h1>
+        </div>
+        <div class="contents page">
+          <h2>Contents</h2>
+          <ul>
+            {
+              recipes.map((recipe) => (
+                <li>
+                  <a href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
 
 <style>
+  main {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
   h1 {
-    position: absolute;
-    translate: -1000%;
+    font-family: "Beachman Script";
+    font-weight: 100;
+    font-size: calc(2rem + 10vw);
+  }
+
+  .pages {
+    display: grid;
+    filter: drop-shadow(0px 4px 4px #666);
+    background-color: #f5f5f5;
   }
 </style>
