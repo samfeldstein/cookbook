@@ -1,17 +1,22 @@
 ---
+import Base from "../../layouts/Base.astro";
+
 import { getCollection } from "astro:content";
 
 // Fetch the recipes collection
 const recipes = await getCollection("recipes");
+recipes.sort();
 ---
 
-<h1>All Recipes</h1>
-<ul>
-  {
-    recipes.map((recipe) => (
-      <li>
-        <a href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
-      </li>
-    ))
-  }
-</ul>
+<Base title="All Recipes">
+  <h1>All Recipes</h1>
+  <ul>
+    {
+      recipes.map((recipe) => (
+        <li>
+          <a href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

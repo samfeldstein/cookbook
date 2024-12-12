@@ -1,4 +1,6 @@
 ---
+// This page replaced the recipe layout
+
 import Base from "../../layouts/Base.astro";
 
 import { getCollection } from "astro:content";
@@ -16,7 +18,7 @@ export async function getStaticPaths() {
 const { recipe } = Astro.props;
 ---
 
-<Base>
+<Base title={recipe.data.title}>
   <header>
     <h1>{recipe.data.title}</h1>
     <ul class="tags">
@@ -100,7 +102,7 @@ const { recipe } = Astro.props;
   header {
     margin-bottom: 4rem;
   }
-  
+
   ul.tags {
     list-style-type: none;
     display: flex;

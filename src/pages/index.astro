@@ -3,8 +3,10 @@ import Head from "../components/Head.astro";
 import { site } from "../../config.mjs";
 import { getCollection } from "astro:content";
 
-// Fetch the recipes collection
 const recipes = await getCollection("recipes");
+const recent = recipes.slice(0, 3);
+const tags = [...new Set(recipes.map((recipe) => recipe.data.tags).flat())];
+tags.sort();
 ---
 
 <Head title="Home" description={site.description} />
@@ -16,13 +18,27 @@ const recipes = await getCollection("recipes");
         <div class="cover page">
           <h1>Family<br />Cookbook</h1>
         </div>
-        <div class="contents page">
-          <h2>Contents</h2>
+        <div class="new page">
+          <h2>New Recipes</h2>
           <ul>
             {
-              recipes.map((recipe) => (
+              recent.map((recipe) => (
                 <li>
                   <a href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div class="categories page">
+          <h2>Categories</h2>
+          <ul class="tags">
+            {
+              tags.map((tag) => (
+                <li>
+                  <a class="tag" href={`/recipes/tags/${tag}`}>
+                    {tag}
+                  </a>
                 </li>
               ))
             }
@@ -31,23 +47,33 @@ const recipes = await getCollection("recipes");
       </div>
     </main>
   </body>
+
+  <style>
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: "Beachman Script";
+      font-weight: 100;
+      font-size: calc(2rem + 10vw);
+    }
+
+    h2 {
+      font-family: Academy Engraved Let;
+      font-weight: 100;
+    }
+
+    .pages {
+      display: grid;
+      padding: 1rem;
+      filter: drop-shadow(0px 4px 4px #666);
+      background-color: #f5f5f5;
+    }
+
+    .tag {
+      text-transform: capitalize;
+    }
+  </style>
 </html>
-
-<style>
-  main {
-    max-width: 60rem;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-family: "Beachman Script";
-    font-weight: 100;
-    font-size: calc(2rem + 10vw);
-  }
-
-  .pages {
-    display: grid;
-    filter: drop-shadow(0px 4px 4px #666);
-    background-color: #f5f5f5;
-  }
-</style>

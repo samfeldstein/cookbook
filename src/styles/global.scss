@@ -1,0 +1,51 @@
+@import url("/src/styles/_fonts.css");
+@import url("/src/styles/_reset.css");
+
+:root {
+    --background-color: #f7f7f7;
+    --card-color: white;
+    --text-color: #1a1a1a;
+    --link-color: #2754d8;
+
+    --logo-font: "5th Grade Cursive";
+}
+
+
+body {
+    background-color: var(--background-color);
+    max-width: 90rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    font-family: system-ui, serif;
+    font-size: 1.25rem;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: calc(1rem + 5vw);
+}
+
+h2 {
+    font-size: calc(1rem + 2vw);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration-thickness: from-font;
+    text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+main p,
+main ul,
+main ol {
+    line-height: 1.5;
+}
