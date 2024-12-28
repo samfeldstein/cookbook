@@ -41,7 +41,7 @@ const { recipe } = Astro.props;
     )
   }
 
-  <div class="recipe">
+  <section class="recipe">
     {
       recipe.data.ingredients && (
         <section class="ingredients">
@@ -95,7 +95,16 @@ const { recipe } = Astro.props;
         </section>
       )
     }
-  </div>
+  </section>
+
+  {
+    recipe.data.notes && (
+      <section class="notes">
+        <h2>Notes</h2>
+        <p>{recipe.data.notes}</p>
+      </section>
+    )
+  }
 </Base>
 
 <style>
@@ -111,10 +120,16 @@ const { recipe } = Astro.props;
   }
 
   section.directions,
-  section.ingredients {
+  section.ingredients,
+  section.notes {
     background-color: var(--card-color);
     padding: 2rem;
-    filter: drop-shadow(0px 4px 4px #666);
+    /* filter: drop-shadow(0px 4px 4px #666); */
+    box-shadow: #666 0px 4px 4px;
+  }
+
+  section.notes {
+    margin-top: 1rem;
   }
 
   .tag {
