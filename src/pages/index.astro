@@ -3,8 +3,14 @@ import Head from "../components/Head.astro";
 import { site } from "../../config.mjs";
 import { getCollection } from "astro:content";
 
+// Functions
+import { sortCollectionByDate } from "../scripts/utils";
+
 const recipes = await getCollection("recipes");
-const recent = recipes.slice(0, 3);
+const recent = sortCollectionByDate(recipes).slice(0, 3);
+console.log(recent);
+
+
 const tags = [...new Set(recipes.map((recipe) => recipe.data.tags).flat())];
 tags.sort();
 ---
