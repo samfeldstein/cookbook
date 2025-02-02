@@ -4,7 +4,7 @@
     --link-color: #2754d8;
 
     /* Fonts: https://modernfontstacks.com */
-    --body-font: 'Nimbus Mono PS', 'Courier New', monospace;
+    --body-font: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 }
 
 
