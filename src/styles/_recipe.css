@@ -1,0 +1,39 @@
+header {
+  margin-bottom: 4rem;
+}
+
+ul.tags {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section.directions,
+section.ingredients,
+section.notes {
+  padding: 1rem;
+  border-style: solid;
+  border-radius: 8px;
+}
+
+section.notes {
+  margin-top: 1rem;
+}
+
+.tag {
+  padding: 0.5em;
+}
+
+.recipe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .recipe {
+    grid-template-columns: 1fr; /* Single column */
+  }
+}

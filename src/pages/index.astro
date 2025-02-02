@@ -52,20 +52,20 @@ tags.sort();
           {
             recent.map((recipe) => (
               <li>
-                <a href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
+                <a class="new" href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
               </li>
             ))
           }
         </ul>
       </section>
       <section class="tags">
-        <h2>Categories</h2>
+        <h2>Tags</h2>
         <ul class="tags">
           {
             tags.map((tag) => (
               <li>
                 <a class="tag" href={`/recipes/tags/${tag}`}>
-                  {tag}
+                  #{tag}
                 </a>
               </li>
             ))

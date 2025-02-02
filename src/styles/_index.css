@@ -5,10 +5,6 @@ main {
   gap: 2rem;
 }
 
-.tag {
-  text-transform: capitalize;
-}
-
 section {
   padding: 1rem;
 }
@@ -17,4 +13,9 @@ section.new,
 section.tags {
   border-style: solid;
   border-radius: 8px;
+}
+
+a.new, a.tag {
+  display: inline-block;
+  padding: 0.5rem;
 }
