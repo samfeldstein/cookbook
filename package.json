@@ -1,19 +1,19 @@
 {
-  "name": "our-family-website",
+  "name": "our-family-cookbook",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "open -a 'Google Chrome' http://localhost:4321/ && astro dev",
-    "build": "astro build && npx @divriots/jampack ./dist",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.0.4"
+    "astro": "^5.0.4",
+    "autoprefixer": "^10.4.20"
   },
   "devDependencies": {
-    "@divriots/jampack": "^0.24.4",
     "cssnano": "^7.0.4"
   }
 }
