@@ -1,5 +1,11 @@
-header {
+hgroup {
   margin-bottom: 4rem;
+}
+
+div.content {
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 ul.tags {
