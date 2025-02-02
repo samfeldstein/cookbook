@@ -1,85 +1,77 @@
 ---
-import Head from "../components/Head.astro";
-import { site } from "../../config.mjs";
 import { getCollection } from "astro:content";
+
+// Styles
+import "../styles/global.css";
+import "../styles/_index.css";
 
 // Functions
 import { sortCollectionByDate } from "../scripts/utils";
 
 const recipes = await getCollection("recipes");
 const recent = sortCollectionByDate(recipes).slice(0, 3);
-console.log(recent);
-
 
 const tags = [...new Set(recipes.map((recipe) => recipe.data.tags).flat())];
 tags.sort();
 ---
 
-<Head title="Home" description={site.description} />
-
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Icons
+        - https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
+        - Favicon generator: https://realfavicongenerator.net/
+        - SVG generator: https://formito.com/tools/favicon
+        - Image compressor: https://squoosh.app/
+        - SVG optimizer: https://jakearchibald.github.io/svgomg/
+        - Favicon checker: https://realfavicongenerator.net/favicon_checker  
+      -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Family Cookbook</title>
+    <meta
+      name="description"
+      content="Our family cookbook, a cookbook for our family."
+    />
+  </head>
   <body>
     <main>
-      <div class="pages">
-        <div class="cover page">
-          <h1>Family<br />Cookbook</h1>
-        </div>
-        <div class="new page">
-          <h2>New Recipes</h2>
-          <ul>
-            {
-              recent.map((recipe) => (
-                <li>
-                  <a href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-        <div class="categories page">
-          <h2>Categories</h2>
-          <ul class="tags">
-            {
-              tags.map((tag) => (
-                <li>
-                  <a class="tag" href={`/recipes/tags/${tag}`}>
-                    {tag}
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-      </div>
+      <h1>Family Cookbook</h1>
+      <section class="new">
+        <h2>New Recipes</h2>
+        <ul>
+          {
+            recent.map((recipe) => (
+              <li>
+                <a href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      <section class="tags">
+        <h2>Categories</h2>
+        <ul class="tags">
+          {
+            tags.map((tag) => (
+              <li>
+                <a class="tag" href={`/recipes/tags/${tag}`}>
+                  {tag}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
     </main>
   </body>
-
-  <style>
-    main {
-      max-width: 60rem;
-      margin: 0 auto;
-    }
-
-    h1 {
-      font-family: "Beachman Script";
-      font-weight: 100;
-      font-size: calc(2rem + 10vw);
-    }
-
-    h2 {
-      font-family: Academy Engraved Let;
-      font-weight: 100;
-    }
-
-    .pages {
-      display: grid;
-      padding: 1rem;
-      filter: drop-shadow(0px 4px 4px #666);
-      background-color: #f5f5f5;
-    }
-
-    .tag {
-      text-transform: capitalize;
-    }
-  </style>
 </html>
