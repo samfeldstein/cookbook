@@ -2,6 +2,9 @@
 // Layout
 import Base from "../../../layouts/Base.astro";
 
+// Styles
+import "../../../styles/_tag.css";
+
 // Collections
 import { getCollection } from "astro:content";
 
@@ -39,12 +42,4 @@ const { recipes } = Astro.props;
       ))
     }
   </ul>
-
-  <p>See <a href="/recipes/tags/">all tags</a>.</p>
 </Base>
-
-<style>
-  li {
-    padding: 0.5rem 0;
-  }
-</style>
