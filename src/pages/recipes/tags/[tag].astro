@@ -28,8 +28,8 @@ const { tag } = Astro.params;
 const { recipes } = Astro.props;
 ---
 
-<Base title={tag}>
-  <h1>{tag}</h1>
+<Base title=`#${tag}`>
+  <h1>#{tag}</h1>
   <ul>
     {
       recipes.map((recipe) => (
@@ -44,10 +44,6 @@ const { recipes } = Astro.props;
 </Base>
 
 <style>
-  h1::before {
-    content: "#";
-  }
-
   li {
     padding: 0.5rem 0;
   }
