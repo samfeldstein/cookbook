@@ -1,0 +1,31 @@
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+#search {
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+}
+
+form {
+  display: grid;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+display: none;
+}
+
+li.pagefind-ui__result {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+
+nav a {
+  padding: 0.5rem;
+}

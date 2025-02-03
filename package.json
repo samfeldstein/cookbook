@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "open -a 'Google Chrome' http://localhost:4321/ && astro dev",
-    "build": "astro build",
+    "build": "astro build && npx -y pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro"
   },

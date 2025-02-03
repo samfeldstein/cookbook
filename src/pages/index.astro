@@ -44,15 +44,20 @@ tags.sort();
     />
   </head>
   <body>
-    <main>
+    <header>
+      <nav><a href="/search/">Search</a></nav>
       <h1>Family Cookbook</h1>
+    </header>
+    <main>
       <section class="new">
         <h2>New Recipes</h2>
         <ul>
           {
             recent.map((recipe) => (
               <li>
-                <a class="new" href={`/recipes/${recipe.id}`}>{recipe.data.title}</a>
+                <a class="new" href={`/recipes/${recipe.id}`}>
+                  {recipe.data.title}
+                </a>
               </li>
             ))
           }

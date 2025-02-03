@@ -1,0 +1,46 @@
+---
+// Styles
+import "../styles/global.css";
+import "../styles/_search.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icons
+        - https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
+        - Favicon generator: https://realfavicongenerator.net/
+        - SVG generator: https://formito.com/tools/favicon
+        - Image compressor: https://squoosh.app/
+        - SVG optimizer: https://jakearchibald.github.io/svgomg/
+        - Favicon checker: https://realfavicongenerator.net/favicon_checker  
+      -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <title>Search | Family Recipes</title>
+    <script src="/pagefind/pagefind-ui.js" is:inline></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <nav><a href="/">Home</a></nav>
+      <h1>Search</h1>
+    </header>
+
+    <main>
+      <div id="search"></div>
+    </main>
+  </body>
+</html>

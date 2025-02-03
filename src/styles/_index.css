@@ -1,3 +1,7 @@
+header {
+  margin-bottom: 4rem;
+}
+
 main {
   max-width: 60rem;
   margin: 0 auto;
@@ -13,6 +17,7 @@ section.new,
 section.tags {
   border-style: solid;
   border-radius: 8px;
+  border-width: 2px;
 }
 
 a.new, a.tag {
