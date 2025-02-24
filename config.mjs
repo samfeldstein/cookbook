@@ -4,6 +4,6 @@ export const site = {
   url: "https://ourfamilywebsite.netlify.app",
   author: {
     name: "Sam Feldstein",
-    email: "samuelfeldstein@proton.me",
+    email: "sam@samfeldstein.xyz",
   }
 };
