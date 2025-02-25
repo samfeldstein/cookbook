@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.0.4",
+    "astro": "^5.3.1",
     "autoprefixer": "^10.4.20"
   },
   "devDependencies": {
