@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "open -a 'Google Chrome' http://localhost:4321/ && astro dev",
+    "start": "open -a 'Firefox Developer Edition' http://localhost:4321/ && astro dev",
     "build": "astro build && npx -y pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro"
