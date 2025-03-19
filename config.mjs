@@ -1,7 +1,7 @@
 export const site = {
-  title: "Family Recipes",
-  description: "A website cataloguing our family recipes.",
-  url: "https://ourfamilywebsite.netlify.app",
+  title: "Cookbook",
+  description: "My personal cookbook.",
+  url: "https://cookbook.samfeldstein.xyz/",
   author: {
     name: "Sam Feldstein",
     email: "sam@samfeldstein.xyz",

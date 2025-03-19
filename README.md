@@ -1,6 +1,6 @@
-# 🧑‍🍳 Family Recipes
+# 🧑‍🍳 Cookbook
 
-A no-frills collection of family recipes.
+A no-frills collection of recipes.
 
 ## 🚘 Under the Hood
 
