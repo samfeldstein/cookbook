@@ -27,10 +27,13 @@ h1 {
     font-family: "Showboat";
     font-weight: 100;
     font-size: clamp(2.75rem, 10vw, 8rem);
+    
+    margin-top: 5rem;
 }
 
 h2 {
     font-variant: small-caps;
+    font-weight: 100;
     font-size: clamp(2.75rem, 8vw, 4rem);
     text-transform: lowercase;
 }
