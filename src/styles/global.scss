@@ -1,0 +1,71 @@
+@use "fonts";
+@use "_reset";
+
+:root {
+    /* Fonts: https://modernfontstacks.com */
+    --body-font: "Tinos", serif;
+
+    // Colors
+    --text-color: #000;
+    --background-color: #fff;
+    --accent: #666;
+}
+
+html {
+    background-color: var(--background-color);
+}
+
+body {
+    margin: 0 auto;
+    
+    font-family: var(--body-font);
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
+    color: var(--text-color);
+}
+
+h1 {
+    font-family: "Showboat";
+    font-weight: 100;
+    font-size: clamp(2.75rem, 10vw, 8rem);
+}
+
+h2 {
+    font-variant: small-caps;
+    font-size: clamp(2.75rem, 8vw, 4rem);
+    text-transform: lowercase;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:not(.tag) {
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
+a.tag {
+    font-style: italic;
+}
+
+a:hover,
+a:focus {
+    color: var(--accent);
+}
+
+main p,
+main ul,
+main ol {
+    line-height: 1.5;
+}
+
+::selection {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }

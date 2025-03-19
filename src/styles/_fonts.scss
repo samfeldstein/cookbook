@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Showboat';
+  src: url('/fonts/subset-Showboat.woff2') format('woff2'),
+      url('/fonts/subset-Showboat.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tinos';
+  src: url('/fonts/subset-Tinos-Bold.woff2') format('woff2'),
+      url('/fonts/subset-Tinos-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tinos';
+  src: url('/fonts/subset-Tinos-Italic.woff2') format('woff2'),
+      url('/fonts/subset-Tinos-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tinos';
+  src: url('/fonts/subset-Tinos-BoldItalic.woff2') format('woff2'),
+      url('/fonts/subset-Tinos-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tinos';
+  src: url('/fonts/subset-Tinos.woff2') format('woff2'),
+      url('/fonts/subset-Tinos.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

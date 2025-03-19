@@ -2,8 +2,8 @@
 // This page replaced the recipe layout
 
 // Styles
-import "../../styles/global.css";
-import "../../styles/_recipe.css";
+import "../../styles/global.scss";
+import "../../styles/_recipe.scss";
 
 // Collections
 import { getCollection } from "astro:content";
@@ -45,8 +45,10 @@ const { recipe } = Astro.props;
   </head>
   <body data-pagefind-body>
     <header>
-      <nav><a href="/">Home</a>
-      <a href="/search/">Search</a></nav>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/search/">Search</a>
+      </nav>
       <h1>{recipe.data.title}</h1>
       <ul class="tags">
         {
