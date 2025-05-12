@@ -2,7 +2,6 @@
 @use "_reset";
 
 :root {
-    /* Fonts: https://modernfontstacks.com */
     --body-font: "Tinos", serif;
 
     // Colors
@@ -17,25 +16,28 @@ html {
 
 body {
     margin: 0 auto;
-    
+
     font-family: var(--body-font);
-    font-size: clamp(1.25rem, 6vw, 1.75rem);
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
     color: var(--text-color);
 }
 
 h1 {
-    font-family: "Showboat";
     font-weight: 100;
-    font-size: clamp(1rem, 14vw, 8rem);
-    
+    font-size: clamp(2rem, 2vw, 5rem);
+    font-variant: small-caps;
+    text-transform: lowercase;
     margin-top: 5rem;
 }
 
 h2 {
-    font-variant: small-caps;
-    font-weight: 100;
-    font-size: clamp(2.75rem, 10vw, 4rem);
-    text-transform: lowercase;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 2vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2vw, 2.75rem);
 }
 
 h1,
@@ -71,4 +73,4 @@ main ol {
 ::selection {
     background-color: var(--text-color);
     color: var(--background-color);
-  }
+}
