@@ -5,6 +5,8 @@
 import "../../styles/global.scss";
 import "../../styles/_recipe.scss";
 
+import Tags from "../../components/Tags.astro";
+
 // Collections
 import { getCollection } from "astro:content";
 
@@ -21,15 +23,13 @@ export async function getStaticPaths() {
 const { recipe } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{recipe.data.title} | Cookbook</title>
-    <!-- Icons
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{recipe.data.title} | Cookbook</title>
+  <!-- Icons
       - https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
       - Favicon generator: https://realfavicongenerator.net/
       - SVG generator: https://formito.com/tools/favicon
@@ -37,108 +37,76 @@ const { recipe } = Astro.props;
       - SVG optimizer: https://jakearchibald.github.io/svgomg/
       - Favicon checker: https://realfavicongenerator.net/favicon_checker  
     -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-  </head>
-  <body data-pagefind-body>
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/search/">Search</a>
-      </nav>
-      <h1>{recipe.data.title}</h1>
-      <ul class="tags">
-        {
-          recipe.data.tags.map((tag) => (
-            <li>
-              <a class="tag" href={`/recipes/tags/${tag}`}>
-                <i>#{tag}</i>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </header>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+</head>
 
-    <main>
-      <div class="content">
-        {
-          recipe.data.source && (
-            <p>
-              Source:{" "}
-              <a href={recipe.data.source.url}> {recipe.data.source.name}</a>.
-            </p>
-          )
-        }
+<body>
+  <header>
+    <h1>{recipe.data.title}</h1>
+    <Tags tags={recipe.data.tags} />
+  </header>
 
-        <section class="recipe">
-          {
-            recipe.data.ingredients && (
-              <section class="ingredients">
-                <h2>Ingredients</h2>
-                {recipe.data.ingredients.sections &&
-                recipe.data.ingredients.sections.length > 0 ? (
-                  recipe.data.ingredients.sections.map((section) => (
-                    <div class="ingredient-section">
-                      <h3>{section.title}</h3>
-                      <ul>
-                        {section.ingredients.map((ingredient) => (
-                          <li>{ingredient}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))
-                ) : (
-                  <ul>
-                    {recipe.data.ingredients.map((ingredient) => (
-                      <li>{ingredient}</li>
-                    ))}
-                  </ul>
-                )}
-              </section>
-            )
-          }
-
-          {
-            recipe.data.directions && (
-              <section class="directions">
-                <h2>Directions</h2>
-                {recipe.data.directions.sections &&
-                recipe.data.directions.sections.length > 0 ? (
-                  recipe.data.directions.sections.map((section) => (
-                    <div class="direction-section">
-                      <h3>{section.title}</h3>
-                      <ol>
-                        {section.steps.map((step) => (
-                          <li>{step}</li>
-                        ))}
-                      </ol>
-                    </div>
-                  ))
-                ) : (
-                  <ol>
-                    {recipe.data.directions.map((step) => (
-                      <li>{step}</li>
-                    ))}
-                  </ol>
-                )}
-              </section>
-            )
-          }
+  <main>
+    {
+      recipe.data.ingredients && (
+        <section class="ingredients">
+          <h2>Ingredients</h2>
+          {Array.isArray(recipe.data.ingredients) &&
+          typeof recipe.data.ingredients[0] === "object" ? (
+            // sectioned ingredients
+            recipe.data.ingredients.map((sec) => (
+              <div class="ingredient-section">
+                <h3>{sec.section}</h3>
+                <ul>
+                  {sec.ingredients.map((i) => (
+                    <li>{i}</li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          ) : (
+            // flat list
+            <ul>
+              {recipe.data.ingredients.map((i) => (
+                <li>{i}</li>
+              ))}
+            </ul>
+          )}
         </section>
+      )
+    }
 
-        {
-          recipe.data.notes && (
-            <section class="notes">
-              <h2>Notes</h2>
-              <p>{recipe.data.notes}</p>
-            </section>
-          )
-        }
-      </div>
-    </main>
-  </body>
-</html>
+    {
+      recipe.data.directions && (
+        <section class="directions">
+          <h2>Directions</h2>
+          {Array.isArray(recipe.data.directions) &&
+          typeof recipe.data.directions[0] === "object" ? (
+            // subsectioned
+            recipe.data.directions.map((sec) => (
+              <div class="direction-section">
+                <h3>{sec.section}</h3>
+                <ol>
+                  {sec.steps.map((step) => (
+                    <li>{step}</li>
+                  ))}
+                </ol>
+              </div>
+            ))
+          ) : (
+            // flat list
+            <ol>
+              {recipe.data.directions.map((step) => (
+                <li>{step}</li>
+              ))}
+            </ol>
+          )}
+        </section>
+      )
+    }
+  </main>
+</body>

@@ -8,20 +8,30 @@ import "../../../styles/_tag.css";
 // Collections
 import { getCollection } from "astro:content";
 
-// Functions
+// Generate a page for each tag with its matching recipes
 export async function getStaticPaths() {
+  // 1. Load all recipes (each has a data.tags array)
   const recipes = await getCollection("recipes");
+
+  // 2. Gather every tag, remove duplicates
+  //    - map to each recipe’s tags array
+  //    - flatten into one list
+  //    - use a Set to drop repeats
   const uniqueTags = [
-    ...new Set(recipes.map((recipe) => recipe.data.tags).flat()),
+    ...new Set(recipes.map((r) => r.data.tags).flat()),
   ];
 
+  // 3. For each unique tag, pick only recipes that include it
   return uniqueTags.map((tag) => {
+    // Filter recipes whose tags array contains this tag
     const filteredPosts = recipes.filter((recipe) =>
       recipe.data.tags.includes(tag),
     );
+
+    // Return a path object: the page URL param and the recipes to render
     return {
-      params: { tag },
-      props: { recipes: filteredPosts },
+      params: { tag },          // URL will be something like /tags/[tag]
+      props: { recipes: filteredPosts }, // Pass these recipes into the page
     };
   });
 }
