@@ -1,5 +1,6 @@
 header {
   margin-bottom: 4rem;
+  text-align: center;
 }
 
 main {
@@ -7,13 +8,8 @@ main {
   margin: 0 auto;
 }
 
-section.new {
-  border-bottom-style: solid;
-  border-bottom-color: var(--accent);
-  border-bottom-width: 1px;
-}
-
-a.new, a.tag {
+a.new,
+a.tag {
   display: inline-block;
   padding: 0.5rem;
 }

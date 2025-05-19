@@ -3,6 +3,8 @@
 
 :root {
     --body-font: "Tinos", serif;
+    --font-small: clamp(1rem, 2vw, 1.5rem);
+    --font-med: clamp(1.25rem, 2vw, 1.75rem);
 
     // Colors
     --text-color: #000;
@@ -18,13 +20,18 @@ body {
     margin: 0 auto;
 
     font-family: var(--body-font);
-    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-size: var(--font-med);
+
     color: var(--text-color);
+}
+
+header {
+    text-align: center;
 }
 
 h1 {
     font-weight: 100;
-    font-size: clamp(2rem, 2vw, 5rem);
+    font-size: clamp(2rem, 10vw, 4rem);
     font-variant: small-caps;
     text-transform: lowercase;
     margin-top: 5rem;
@@ -34,6 +41,9 @@ h2 {
     font-style: italic;
     font-weight: 400;
     font-size: clamp(1.5rem, 2vw, 3rem);
+    border-bottom: 1px solid;
+    border-color: #b4b4b4;
+    padding-bottom: 0.5rem;
 }
 
 h3 {
@@ -64,13 +74,28 @@ a:focus {
     color: var(--accent);
 }
 
-main p,
-main ul,
-main ol {
-    line-height: 1.5;
+main {
+
+    p,
+    ul,
+    ol {
+        line-height: 1.5;
+    }
+
+    ul {
+        list-style-type: circle;
+
+        li::marker {
+            font-size: .75em;
+        }
+    }
 }
 
 ::selection {
     background-color: var(--text-color);
     color: var(--background-color);
+}
+
+nav {
+    font-size: var(--font-small);
 }

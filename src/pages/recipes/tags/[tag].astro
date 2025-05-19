@@ -3,7 +3,7 @@
 import Base from "../../../layouts/Base.astro";
 
 // Styles
-import "../../../styles/_tag.css";
+import "../../../styles/_tag.scss";
 
 // Collections
 import { getCollection } from "astro:content";
@@ -17,9 +17,7 @@ export async function getStaticPaths() {
   //    - map to each recipe’s tags array
   //    - flatten into one list
   //    - use a Set to drop repeats
-  const uniqueTags = [
-    ...new Set(recipes.map((r) => r.data.tags).flat()),
-  ];
+  const uniqueTags = [...new Set(recipes.map((r) => r.data.tags).flat())];
 
   // 3. For each unique tag, pick only recipes that include it
   return uniqueTags.map((tag) => {
@@ -30,15 +28,10 @@ export async function getStaticPaths() {
 
     // Return a path object: the page URL param and the recipes to render
     return {
-      params: { tag },          // URL will be something like /tags/[tag]
+      params: { tag }, // URL will be something like /tags/[tag]
       props: { recipes: filteredPosts }, // Pass these recipes into the page
     };
   });
-}
-
-// Capitalize first letter
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 // Variables
@@ -46,8 +39,8 @@ const { tag } = Astro.params;
 const { recipes } = Astro.props;
 ---
 
-<Base title=`${capitalize(tag)} Recipes`>
-  <h1>{tag} Recipes</h1>
+<Base title=`#${tag}`>
+  <h1>#{tag}</h1>
   <ul>
     {
       recipes.map((recipe) => (

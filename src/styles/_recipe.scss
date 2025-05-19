@@ -1,8 +1,22 @@
+h1 {
+  margin-bottom: 0;
+}
+
 header {
   margin-bottom: 4rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+div.notes {
+  margin-top: 4rem;
 }
 
 ul.tags {
+  font-size: var(--font-small);
+  
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -13,9 +27,7 @@ ul.tags {
 section.directions,
 section.ingredients,
 section.notes {
-  border-radius: 5px;
   padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 section.notes {
@@ -26,18 +38,22 @@ section.notes {
   padding: 0.5em;
 }
 
-.recipe {
+div.recipe {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
 }
 
 nav a {
   padding: 0.5rem;
 }
 
+hr {
+  border: none;
+}
+
 @media (max-width: 800px) {
-  .recipe {
+  div.recipe {
     grid-template-columns: 1fr;
     /* Single column */
   }

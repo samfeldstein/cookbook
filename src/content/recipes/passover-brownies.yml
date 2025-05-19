@@ -1,8 +1,8 @@
 title: Passover Brownies
 pubDate: 2024-12-28
 tags:
-  - dessert
-  - brownie
+  - desserts
+  - brownies
   - passover
   - jewish
 ingredients:
@@ -18,17 +18,21 @@ ingredients:
   - 1 package chocolate chips
   - 6 T heavy cream
 directions:
-  - Cream butter and sugar.
-  - Add eggs.
-  - Sift dry ingredients, add to mixture.
-  - Add chips.
-  - Bake at 350 30 minutes.
-  - Cool.
-  - Frost.
-  - Chill.
-frosting_directions:
-  - Melt chocolate.
-  - Add cream.
-  - Mix.
+  - section: Batter
+    steps:
+      - Cream butter and sugar.
+      - Add eggs.
+      - Sift dry ingredients, add to mixture.
+      - Add chips.
+      - Bake at 350 30 minutes.
+      - Cool.
+      - Frost.
+      - Chill.
+  - section: Frosting
+    steps:
+      - Melt chocolate.
+      - Add cream.
+      - Mix.
 notes:
-  - Inspired by Sara Coleman’s recipe from Mount Sinai Temple Sisterhood cookbook.
+  - Inspired by Sara Coleman’s recipe from Mount Sinai Temple Sisterhood
+    cookbook.
