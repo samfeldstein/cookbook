@@ -5,6 +5,6 @@ A no-frills collection of recipes.
 ## 🚘 Under the Hood
 
 - Astro components
-- Vanilla CSS
-- Recipes stored as JSON
+- Sass
+- Recipes stored as yml
 - Pagefind powers search
