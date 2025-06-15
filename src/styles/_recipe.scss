@@ -16,7 +16,7 @@ div.notes {
 
 ul.tags {
   font-size: var(--font-small);
-  
+
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -50,6 +50,14 @@ nav a {
 
 hr {
   border: none;
+}
+
+.recipe ul {
+  list-style-type: circle;
+
+  li::marker {
+    font-size: .75em;
+  }
 }
 
 @media (max-width: 800px) {

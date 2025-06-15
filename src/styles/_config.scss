@@ -1,0 +1,17 @@
+:root {
+  --body-font: "Tinos", serif;
+  --font-small: clamp(1rem, 2vw, 1.5rem);
+  --font-med: clamp(1.25rem, 2vw, 1.75rem);
+
+  // Colors
+  --text-color: #000;
+  --background-color: #fff;
+  --accent: #666;
+
+  /* Pagefind */
+  --pagefind-ui-font: var(--body-font);
+  --pagefind-ui-primary: var(--text-color);
+  --pagefind-ui-text: var(--text-color);
+  --pagefind-ui-border: var(--text-color);
+  --pagefind-ui-background: var(--background-color);
+}

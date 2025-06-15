@@ -3,10 +3,6 @@ main {
   margin: 0 auto;
 }
 
-#search {
-  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-}
-
 form {
   display: grid;
 }
@@ -18,7 +14,7 @@ input {
 }
 
 button {
-display: none;
+  display: none;
 }
 
 li.pagefind-ui__result {
