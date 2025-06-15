@@ -25,3 +25,7 @@ li.pagefind-ui__result {
 nav a {
   padding: 0.5rem;
 }
+
+input:focus {
+  outline: 0;
+}
