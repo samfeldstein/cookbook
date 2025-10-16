@@ -5,7 +5,9 @@
 import "../../styles/global.scss";
 import "../../styles/_recipe.scss";
 
+// Components
 import Tags from "../../components/Tags.astro";
+import WakeLock from "../../components/WakeLock.astro";
 
 // Collections
 import { getCollection } from "astro:content";
@@ -63,6 +65,8 @@ const { recipe } = Astro.props;
           </p>
         )
       }
+
+      <p>Lock screen: <WakeLock /></p>
     </header>
 
     <main>

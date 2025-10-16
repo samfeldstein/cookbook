@@ -1,0 +1,49 @@
+title: Chicken Quesadillas
+pubDate: 2025-02-25
+tags:
+  - mexican
+
+ingredients:
+  - section: Quesadillas
+    ingredients:
+      - Monterey Jack cheese, grated
+      - Sharp cheddar cheese, grated
+      - 3 chicken breasts, butterflied and pounded thin
+      - Flour tortillas
+      - Vegetable oil
+      - Guac, salsa, and sour cream for serving
+  - section: Marinade
+    ingredients:
+      - 2 Tbsp vegetable oil
+      - 2 garlic cloves, crushed
+      - 1 tsp oregano
+      - 1 Tbsp cumin
+      - 1 tsp cayenne
+      - 1 tsp paprika
+      - 1 tsp white sugar
+      - 1 lime, juiced
+      - 1 Tbsp olive oil
+      - 1 tsp kosher salt
+      - 1 tsp freshly ground pepper
+
+directions:
+  - section: Marinade
+    steps: 
+      - Whisk it up.
+      - Put marinade and chicken in a bowl. Massage to cover evenly.
+      - Cover and refrigerate 30 minutes.
+  - section: Chicken
+    steps:
+      - Preheat skillet over high heat.
+      - Cook chicken on both sides. Should be a nice golden brown.
+      - Remove, cool a little, slice.
+  - section: Quesadillas
+    steps:
+    - Add chicken and cheese to quesadillas.
+    - Heat a generous amount of oil in a skillet over medium.
+    - Drop in your quesadilla and cook for about a minute and a half. Should be a nice golden brown.
+    - Flip and do the other side.
+
+source:
+  name: Babish
+  url: https://youtu.be/E0G5Y2SOW0c?si=ookqQGRH8EXy4vle

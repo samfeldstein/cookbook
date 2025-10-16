@@ -1,0 +1,34 @@
+<button id="stayAwake">Off</button>
+
+<script>
+  let wakeLock = null;
+  const button = document.getElementById("stayAwake");
+
+  async function requestWakeLock() {
+    try {
+      wakeLock = await navigator.wakeLock.request("screen");
+      button.textContent = "On";
+      wakeLock.addEventListener("release", () => {
+        button.textContent = "On";
+      });
+    } catch (err) {
+      console.error(`${err.name}, ${err.message}`);
+    }
+  }
+
+  function releaseWakeLock() {
+    if (wakeLock) {
+      wakeLock.release();
+      wakeLock = null;
+    }
+  }
+
+  button.addEventListener("click", () => {
+    if (!wakeLock) {
+      requestWakeLock();
+    } else {
+      releaseWakeLock();
+      button.textContent = "Off";
+    }
+  });
+</script>

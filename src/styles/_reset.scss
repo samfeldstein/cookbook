@@ -11,7 +11,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
-  
+
   /* Force scrollbar */
   overflow-y: auto;
 }
@@ -48,4 +48,8 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  cursor: pointer;
 }
