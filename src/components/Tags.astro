@@ -7,9 +7,15 @@ const { tags } = Astro.props;
     tags.map((tag) => (
       <li>
         <a class="tag" href={`/recipes/tags/${tag}`}>
-          #{tag}
+          {tag}
         </a>
       </li>
     ))
   }
 </ul>
+
+<style>
+  ul {
+    font-size: var(--font-smaller);
+  }
+</style>

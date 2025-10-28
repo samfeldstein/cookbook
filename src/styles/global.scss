@@ -22,9 +22,8 @@ header {
 h1 {
     font-weight: 100;
     font-size: clamp(2rem, 4vw, 4rem);
-    font-variant: small-caps;
-    text-transform: lowercase;
-    margin-top: 5rem;
+    letter-spacing: 0.1em;
+    margin-top: 1em;
 }
 
 h2 {
@@ -50,10 +49,7 @@ a {
     text-decoration: none;
 }
 
-a:not(.tag) {
-    font-variant: small-caps;
-    text-transform: lowercase;
-}
+
 
 a.tag {
     font-style: italic;
@@ -66,14 +62,16 @@ a:focus {
 
 main {
 
+    a:not(.tag) {
+        font-variant: small-caps;
+        text-transform: lowercase;
+        letter-spacing: 0.1em;
+    }
+
     p,
     ul,
     ol {
         line-height: 1.5;
-    }
-
-    ul {
-        list-style-type: none;
     }
 }
 
@@ -83,5 +81,5 @@ main {
 }
 
 nav {
-    font-size: var(--font-small);
+    font-size: var(--font-smaller);
 }

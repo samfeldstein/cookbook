@@ -1,5 +1,6 @@
 :root {
   --body-font: "Tinos", serif;
+  --font-smaller: clamp(0.85rem, 2vw, 1.25rem);
   --font-small: clamp(1rem, 2vw, 1.5rem);
   --font-med: clamp(1.25rem, 2vw, 1.75rem);
 

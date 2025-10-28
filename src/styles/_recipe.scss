@@ -15,7 +15,6 @@ div.notes {
 }
 
 ul.tags {
-  font-size: var(--font-small);
 
   list-style-type: none;
   padding: 0;
@@ -53,7 +52,6 @@ hr {
 }
 
 .recipe ul {
-  list-style-type: circle;
 
   li::marker {
     font-size: .75em;

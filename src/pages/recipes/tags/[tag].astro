@@ -39,8 +39,8 @@ const { tag } = Astro.params;
 const { recipes } = Astro.props;
 ---
 
-<Base title=`#${tag}`>
-  <h1>#{tag}</h1>
+<Base title=`${tag}`>
+  <h1>{tag}</h1>
   <ul>
     {
       recipes.map((recipe) => (

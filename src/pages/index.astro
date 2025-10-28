@@ -38,10 +38,7 @@ tags.sort();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>Cookbook</title>
-    <meta
-      name="description"
-      content="My personal collection of recipes."
-    />
+    <meta name="description" content="My personal collection of recipes." />
   </head>
   <body>
     <header>
@@ -57,20 +54,6 @@ tags.sort();
               <li>
                 <a class="new" href={`/recipes/${recipe.id}`}>
                   {recipe.data.title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-      <section class="tags">
-        <h2>Tags</h2>
-        <ul class="tags">
-          {
-            tags.map((tag) => (
-              <li>
-                <a class="tag" href={`/recipes/tags/${tag}`}>
-                  #{tag}
                 </a>
               </li>
             ))
