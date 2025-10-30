@@ -2,7 +2,9 @@
 .astro/
 
 # dependencies
-node_modules/
+node_modules/*
+## For Cloudflare
+!node_modules/.astro/
 
 # logs
 npm-debug.log*
