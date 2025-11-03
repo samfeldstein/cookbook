@@ -1,11 +1,11 @@
 ---
-// This page replaced the recipe layout
 
 // Styles
 import "../../styles/global.scss";
 import "../../styles/_recipe.scss";
 
 // Components
+import Nav from "../../components/Nav.astro";
 import Tags from "../../components/Tags.astro";
 import WakeLock from "../../components/WakeLock.astro";
 
@@ -50,10 +50,7 @@ const { recipe } = Astro.props;
 
   <body data-pagefind-body>
     <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/search/">Search</a>
-      </nav>
+      <Nav/>
       <h1>{recipe.data.title}</h1>
       <Tags tags={recipe.data.tags} />
 
@@ -134,3 +131,14 @@ const { recipe } = Astro.props;
     </main>
   </body>
 </html>
+
+<style>
+  ul, ol {
+    display: grid;
+    gap: 1em;
+  }
+
+  #notes {
+    margin-top: 2em;
+  }
+</style>
