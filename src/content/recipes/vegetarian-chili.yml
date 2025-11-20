@@ -1,7 +1,7 @@
 title: Vegetarian Chili
 pubDate: 2025-11-20
 tags:
-  - vegetarian 
+  - vegetarian
   - soup
 
 ingredients:
@@ -32,9 +32,17 @@ ingredients:
       - Pickled Onions
 
 directions:
-  - section: Chili
-    steps:
-      - Heat the oil in a large pot over medium heat. Add the onion, a pinch of salt, and several grinds of pepper and stir. Cook until the onion is translucent, 5 minutes, then add the red pepper. Stir and cook until soft, 5 to 8 minutes, turning down the heat as needed.
-      - Add the garlic, chili powder, and cumin, if using, and stir for 30 seconds, until fragrant.
-      - Add the tomatoes, beans, water, chipotles, adobo sauce, corn, salt, and several grinds of pepper. Cover, reduce the heat to low, and simmer for 25 minutes, stirring occasionally, or until the chili has thickened.
-      - Stir in the lime juice and season to taste. Serve with desired toppings.
+  - Heat the oil in a large pot over medium heat. Add the onion, a pinch of
+    salt, and several grinds of pepper and stir. Cook until the onion is
+    translucent, 5 minutes, then add the red pepper. Stir and cook until soft, 5
+    to 8 minutes, turning down the heat as needed.
+  - Add the garlic, chili powder, and cumin, if using, and stir for 30 seconds,
+    until fragrant.
+  - Add the tomatoes, beans, water, chipotles, adobo sauce, corn, salt, and
+    several grinds of pepper. Cover, reduce the heat to low, and simmer for 25
+    minutes, stirring occasionally, or until the chili has thickened.
+  - Stir in the lime juice and season to taste. Serve with desired toppings.
+
+source:
+  name: Love and Lemons
+  url: https://www.loveandlemons.com/vegetarian-chili-recipe/
