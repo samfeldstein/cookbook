@@ -1,5 +1,4 @@
 ---
-
 // Styles
 import "../../styles/global.scss";
 import "../../styles/_recipe.scss";
@@ -50,7 +49,7 @@ const { recipe } = Astro.props;
 
   <body data-pagefind-body>
     <header>
-      <Nav/>
+      <Nav />
       <h1>{recipe.data.title}</h1>
       <Tags tags={recipe.data.tags} />
 
@@ -116,24 +115,27 @@ const { recipe } = Astro.props;
           )
         }
       </div>
-      <section id="notes">
-        <h2>Notes</h2>
-        {
-          recipe.data.source && (
-            <p>
-              Original recipe from{" "}
-              <a href={recipe.data.source.url}>{recipe.data.source.name}</a>.
-            </p>
-          )
-        }
-        {recipe.data.notes && <p class="notes">{recipe.data.notes}</p>}
-      </section>
+      {
+        recipe.data.notes && (
+          <section id="notes">
+            <h2>Notes</h2>
+            {recipe.data.source && (
+              <p>
+                Original recipe from{" "}
+                <a href={recipe.data.source.url}>{recipe.data.source.name}</a>.
+              </p>
+            )}
+            {recipe.data.notes && <p class="notes">{recipe.data.notes}</p>}
+          </section>
+        )
+      }
     </main>
   </body>
 </html>
 
 <style>
-  ul, ol {
+  ul,
+  ol {
     display: grid;
     gap: 0.5em;
   }
