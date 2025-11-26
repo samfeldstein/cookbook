@@ -116,7 +116,7 @@ const { recipe } = Astro.props;
         }
       </div>
       {
-        recipe.data.notes && (
+        (recipe.data.notes || recipe.data.source) && (
           <section id="notes">
             <h2>Notes</h2>
             {recipe.data.source && (
