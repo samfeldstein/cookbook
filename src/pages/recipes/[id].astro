@@ -1,4 +1,6 @@
 ---
+import { render } from "astro:content";
+
 // Styles
 import "../../styles/global.scss";
 import "../../styles/_recipe.scss";
@@ -22,6 +24,7 @@ export async function getStaticPaths() {
 }
 // 2. For your template, you can get the entry directly from the prop
 const { recipe } = Astro.props;
+const { Content } = await render(recipe);
 ---
 
 <!doctype html>
@@ -57,6 +60,14 @@ const { recipe } = Astro.props;
     </header>
 
     <main>
+      {
+        Content && (
+          <div id="md-content">
+            <Content />
+          </div>
+        )
+      }
+
       <div class="recipe">
         {
           recipe.data.ingredients && (
@@ -133,7 +144,12 @@ const { recipe } = Astro.props;
   </body>
 </html>
 
-<style>
+<style lang="scss">
+  #md-content {
+    max-width: 50rem;
+    margin: 5rem auto;
+  }
+
   ul,
   ol {
     display: grid;
@@ -142,5 +158,13 @@ const { recipe } = Astro.props;
 
   #notes {
     margin-top: 2em;
+  }
+</style>
+
+<style is:global lang="scss">
+  #md-content {
+    h2 {
+      margin-top: 5rem;
+    }
   }
 </style>
