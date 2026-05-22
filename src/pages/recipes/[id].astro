@@ -146,25 +146,29 @@ const { Content } = await render(recipe);
 
 <style lang="scss">
   #md-content {
-    max-width: 50rem;
+    max-width: 60rem;
+
     margin: 5rem auto;
-  }
+    padding: 1em 2em;
+    border-radius: 0.25em;
 
-  ul,
-  ol {
-    display: grid;
-    gap: 0.5em;
-  }
-
-  #notes {
-    margin-top: 2em;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
   }
 </style>
 
 <style is:global lang="scss">
   #md-content {
     h2 {
-      margin-top: 5rem;
+      margin-top: 1em;
+      text-align: right;
+      border-bottom: 1px solid currentColor;
+    }
+
+    li {
+      margin: 0.25em;
+      padding: 0.5em;
     }
   }
 </style>
