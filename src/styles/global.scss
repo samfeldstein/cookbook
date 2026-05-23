@@ -2,31 +2,9 @@
 @use "_reset";
 @use "_config";
 
-html {
-    background-color: var(--background-color);
-}
-
-body {
-    margin: 0 auto;
-
-    font-family: var(--body-font);
-    font-size: var(--font-size-base);
-
-    color: var(--text-color);
-}
-
 h1 {
     font-weight: 400;
     letter-spacing: 0.1em;
-}
-
-h3 {
-    font-size: clamp(1.25rem, 2vw, 2rem);
-}
-
-h1,
-h2 {
-    text-align: center;
 }
 
 a {
@@ -43,8 +21,6 @@ a {
         text-decoration: underline;
         text-decoration-thickness: 0.1em;
     }
-
-    
 }
 
 main {

@@ -1,23 +1,46 @@
 ---
-import Head from "../components/Head.astro";
-import Skiplink from "../components/Skiplink.astro";
-import Nav from "../components/Nav.astro";
+// Components
+import Skiplink from "@/components/Skiplink.astro";
+import Head from "@/components/Head/Head.astro";
 
-import "../styles/global.scss";
+import Nav from "@/components/Nav.astro";
 
-const { title, description = title } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-  <Head title={title} description={description} />
+<html lang="en-us">
+  <Head title={title} />
   <body>
-    <Skiplink />
     <header>
       <Nav />
     </header>
-    <main id="main-content">
+    <Skiplink />
+    <main id="main">
       <slot />
     </main>
   </body>
 </html>
+
+<style lang="scss">
+  body {
+    padding: 2vw;
+
+    font-family: var(--body-font);
+    font-size: var(--font-size-base);
+    font-optical-sizing: auto;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  main {
+    margin-top: 1em;
+    padding: 1em 2em;
+    border-radius: 0.25rem;
+
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+  }
+</style>

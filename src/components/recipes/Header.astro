@@ -19,3 +19,14 @@ const { title, tags } = Astro.props;
     margin-bottom: 0;
   }
 </style>
+
+<style is:global>
+  .tags {
+    list-style-type: none;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 0.5em 1em;
+  }
+</style>
