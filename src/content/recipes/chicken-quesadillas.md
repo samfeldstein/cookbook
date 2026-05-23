@@ -2,7 +2,6 @@
 title: Chicken Quesadillas
 pubDate: 2025-02-25
 tags:
-  - easy
   - mexican
   - chicken
 ---
@@ -14,7 +13,7 @@ tags:
 5. Preheat a skillet over high heat.
 6. Cook marinated chicken on both sides until nicely golden brown and cooked through.[^2]
 7. Remove from skillet, let cool slightly, then slice.
-8. Top a **small Sonora-style flour tortilla**[^3] with sliced chicken, **Monterey Jack cheese**, and **sharp cheddar cheese**. Cover with another tortilla and press flat as you can.
+8. Top a **small Sonora-style flour tortilla**[^3] with **Monterey Jack** and **sharp cheddar cheese**, sliced chicken, then more cheese. Cover with another tortilla and press flat as you can.
 9. Heat vegetable oil in a skillet over medium heat.
 10. Cook quesadillas till golden brown on each side.
 11. Serve with **guac**, **salsa**, and **sour cream**.
