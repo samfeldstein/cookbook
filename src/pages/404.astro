@@ -1,32 +1,13 @@
 ---
-import Nav from "../components/Nav.astro";
-import "../styles/global.scss";
+import Base from "@/layouts/Base.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Not Found | Cookbook</title>
-  </head>
+<Base title="Page Not Found">
+  <h1>Page Not Found</h1>
+</Base>
 
-  <body>
-    <header>
-      <Nav />
-      <h1>Page Not Found</h1>
-    </header>
-
-    <p>
-      It looks like this page doesn't exist. If you think this is a mistake, <a
-        href="mailto:sam@samfeldstein.xyz">email me</a
-      >.
-    </p>
-  </body>
-</html>
-
-<style>
-  a {
-    font-variant: small-caps;
-    text-transform: lowercase;
-  }
-</style>
+<p>
+  It looks like this page doesn't exist. If you think this is a mistake, <a
+    href="mailto:sam@samfeldstein.xyz">email me</a
+  >.
+</p>

@@ -1,10 +1,6 @@
 ---
-import Nav from "../components/Nav.astro";
+import Base from "@/layouts/Base.astro";
 import { getCollection } from "astro:content";
-
-// Styles
-import "../styles/global.scss";
-import "../styles/_index.scss";
 
 // Functions
 import { sortCollectionByDate } from "../scripts/utils";
@@ -16,51 +12,19 @@ const tags = [...new Set(recipes.map((recipe) => recipe.data.tags).flat())];
 tags.sort();
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- Icons
-        - https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
-        - Favicon generator: https://realfavicongenerator.net/
-        - SVG generator: https://formito.com/tools/favicon
-        - Image compressor: https://squoosh.app/
-        - SVG optimizer: https://jakearchibald.github.io/svgomg/
-        - Favicon checker: https://realfavicongenerator.net/favicon_checker  
-      -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Cookbook</title>
-    <meta name="description" content="My personal collection of recipes." />
-  </head>
-  <body>
-    <header>
-      <Nav />
-      <h1>Cookbook</h1>
-    </header>
-    <main>
-      <section class="new">
-        <h2>New Recipes</h2>
-        <ul>
-          {
-            recent.map((recipe) => (
-              <li>
-                <a class="new" href={`/recipes/${recipe.id}`}>
-                  {recipe.data.title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-    </main>
-  </body>
-</html>
+<Base title="Home">
+  <section class="new">
+    <h2>New Recipes</h2>
+    <ul>
+      {
+        recent.map((recipe) => (
+          <li>
+            <a class="new" href={`/recipes/${recipe.id}`}>
+              {recipe.data.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Base>

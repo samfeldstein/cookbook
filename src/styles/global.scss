@@ -5,19 +5,22 @@
 h1 {
     font-weight: 400;
     letter-spacing: 0.1em;
+    text-align: center;
 }
 
 a {
     color: currentColor;
     text-decoration: none;
 
-    &:not(nav a,.tag) {
+    &:not(nav a, .tag) {
 
-    font-variant: small-caps;
+        font-variant: small-caps;
         text-transform: lowercase;
+        letter-spacing: 0.1em;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         text-decoration: underline;
         text-decoration-thickness: 0.1em;
     }

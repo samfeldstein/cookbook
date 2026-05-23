@@ -23,8 +23,12 @@ const { title } = Astro.props;
 </html>
 
 <style lang="scss">
+  html {
+    font-size: 16px;
+  }
+
   body {
-    padding: 2vw;
+    max-width: 80rem;
 
     font-family: var(--body-font);
     font-size: var(--font-size-base);
@@ -35,12 +39,6 @@ const { title } = Astro.props;
   }
 
   main {
-    margin-top: 1em;
-    padding: 1em 2em;
-    border-radius: 0.25rem;
-
-    -webkit-box-shadow: var(--box-shadow);
-    -moz-box-shadow: var(--box-shadow);
-    box-shadow: var(--box-shadow);
+    margin-top: 4rem;
   }
 </style>
