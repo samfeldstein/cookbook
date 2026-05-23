@@ -1,0 +1,24 @@
+---
+import { site } from "../../config.mjs";
+
+import Icons from "./Icons.astro";
+import PreloadFonts from "./PreloadFonts.astro";
+
+// Styles
+import "@/styles/global.scss";
+
+const { title, description } = Astro.props;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <Icons />
+  <PreloadFonts />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title} | {site.title}</title>
+  <meta name="description" content={description || site.description} />
+</head>

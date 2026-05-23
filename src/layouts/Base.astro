@@ -1,7 +1,7 @@
 ---
 // Components
 import Skiplink from "@/components/Skiplink.astro";
-import Head from "@/components/Head/Head.astro";
+import Head from "@/components/Head.astro";
 
 import Nav from "@/components/Nav.astro";
 
@@ -13,9 +13,10 @@ const { title } = Astro.props;
   <Head title={title} />
   <body>
     <header>
+      <Skiplink />
       <Nav />
     </header>
-    <Skiplink />
+
     <main id="main">
       <slot />
     </main>
