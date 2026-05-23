@@ -5,15 +5,15 @@ const { title, tags } = Astro.props;
 ---
 
 <header>
-  <h1>{title}</h1>
-  <Tags tags={tags}/>
+  <h1 data-pagefind-body>{title}</h1>
+  <Tags tags={tags} />
 </header>
 
 <style>
   header {
     border-bottom: 1px dashed currentColor;
   }
-  
+
   h1 {
     font-size: 1.25em;
     margin-bottom: 0;
