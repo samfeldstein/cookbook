@@ -24,5 +24,5 @@ tags:
 Original recipe from [Babish](https://youtu.be/E0G5Y2SOW0c?si=ookqQGRH8EXy4vle).
 
 [^1]: Helps them cook evenly.
-[^2]: Chicken very smoky, though maybe because I was using a steel skillet. Try in the oven next time.
+[^2]: Chicken very smoky, though maybe because I was using a steel skillet. Try nonstick or oven next time. If oven, could try broiling at the end for crisp?
 [^3]: Sonora-style crisp up fast.

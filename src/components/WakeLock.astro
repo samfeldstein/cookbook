@@ -5,10 +5,6 @@
   async function requestWakeLock() {
     try {
       wakeLock = await navigator.wakeLock.request("screen");
-      button.textContent = "Screen Locked";
-      wakeLock.addEventListener("release", () => {
-        button.textContent = "Screen Locked";
-      });
     } catch (err) {
       console.error(`${err.name}, ${err.message}`);
     }
@@ -26,16 +22,15 @@
       requestWakeLock();
     } else {
       releaseWakeLock();
-      button.textContent = "Screen Unlocked";
     }
   });
 </script>
 
-<button id="stayAwake">Screen Unlocked</button>
+<button id="stayAwake">Screen Lock</button>
 
 <style lang="scss">
   button {
     background-color: var(--background-color);
-    padding: 0.5em 1em;
+    border: none;
   }
 </style>

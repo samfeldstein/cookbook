@@ -7,8 +7,6 @@ import "../../styles/_recipe.scss";
 
 // Components
 import Nav from "../../components/Nav.astro";
-import Tags from "../../components/Tags.astro";
-import WakeLock from "../../components/WakeLock.astro";
 import Header from "../../components/recipes/Header.astro";
 
 // Collections
@@ -52,10 +50,7 @@ const { Content } = await render(recipe);
   </head>
 
   <body data-pagefind-body>
-    <header>
-      <Nav />
-      <WakeLock />
-    </header>
+    <Nav />
 
     <main>
       <Header title={recipe.data.title} tags={recipe.data.tags} />
@@ -139,23 +134,6 @@ const { Content } = await render(recipe);
     gap: 1rem;
   }
 
-  header {
-    padding: 1em;
-    border-radius: 0.25rem;
-
-    background-color: var(--background-color);
-
-    -webkit-box-shadow: var(--box-shadow);
-    -moz-box-shadow: var(--box-shadow);
-    box-shadow: var(--box-shadow);
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    font-size: 0.75em;
-  }
-
   main {
     background-color: var(--background-color);
 
@@ -219,3 +197,17 @@ const { Content } = await render(recipe);
     }
   }
 </style>
+
+<script>
+  let wakeLock = null;
+
+  async function requestWakeLock() {
+    try {
+      wakeLock = await navigator.wakeLock.request("screen");
+    } catch (err) {
+      console.error(`${err.name}, ${err.message}`);
+    }
+  }
+
+  requestWakeLock();
+</script>
