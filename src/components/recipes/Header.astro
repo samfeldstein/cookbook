@@ -1,0 +1,21 @@
+---
+import Tags from "../Tags.astro";
+
+const { title, tags } = Astro.props;
+---
+
+<header>
+  <h1>{title}</h1>
+  <Tags tags={tags}/>
+</header>
+
+<style>
+  header {
+    border-bottom: 1px dashed currentColor;
+  }
+  
+  h1 {
+    font-size: 1.25em;
+    margin-bottom: 0;
+  }
+</style>

@@ -1,13 +1,15 @@
 :root {
-  --body-font: "Tinos", serif;
-  --font-smaller: clamp(0.85rem, 2vw, 1.25rem);
-  --font-small: clamp(1rem, 2vw, 1.5rem);
-  --font-med: clamp(1.25rem, 2vw, 1.75rem);
+  --body-font: "Edu SA Beginner", cursive;
+  --font-size-base: clamp(1.25rem, 4vw, 1.75rem);
 
   // Colors
   --text-color: #000;
-  --background-color: #fff;
+  --white: oklch(1 0 0);
+  --blue: oklch(0.6295 0.1523 261.57);
   --accent: #666;
+
+  // Box shadow
+  --box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.36);
 
   /* Pagefind */
   --pagefind-ui-font: var(--body-font);

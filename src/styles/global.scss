@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
 
     font-family: var(--body-font);
-    font-size: var(--font-med);
+    font-size: var(--font-size-base);
 
     color: var(--text-color);
 }
@@ -20,17 +20,8 @@ header {
 }
 
 h1 {
-    font-weight: 100;
-    font-size: clamp(2rem, 4vw, 4rem);
-    letter-spacing: 0.1em;
-    margin-top: 1em;
-}
-
-h2 {
-    font-style: italic;
     font-weight: 400;
-    font-size: clamp(1.5rem, 2vw, 3rem);
-    padding-bottom: 0.5rem;
+    letter-spacing: 0.1em;
 }
 
 h3 {
@@ -43,39 +34,34 @@ h2 {
 }
 
 a {
-    color: #000;
+    color: currentColor;
     text-decoration: none;
-}
 
-a.tag {
-    font-style: italic;
-}
+    &:not(nav a,.tag) {
 
-a:hover,
-a:focus {
-    color: var(--accent);
+    font-variant: small-caps;
+        text-transform: lowercase;
+    }
+
+    &:hover, &:focus {
+        text-decoration: underline;
+        text-decoration-thickness: 0.1em;
+    }
+
+    
 }
 
 main {
-
-    a:not(.tag) {
-        font-variant: small-caps;
-        text-transform: lowercase;
-        letter-spacing: 0.1em;
-    }
 
     p,
     ul,
     ol {
         line-height: 1.3;
+        text-wrap: pretty;
     }
 }
 
 ::selection {
-    background-color: var(--text-color);
-    color: var(--background-color);
-}
-
-nav {
-    font-size: var(--font-smaller);
+    background-color: var(--blue);
+    color: var(--white);
 }
