@@ -1,5 +1,7 @@
 ---
 import Base from "@/layouts/Base.astro";
+
+import { site } from "../../config.mjs";
 ---
 
 <Base title="Page Not Found">
@@ -8,6 +10,6 @@ import Base from "@/layouts/Base.astro";
 
 <p>
   It looks like this page doesn't exist. If you think this is a mistake, <a
-    href="mailto:sam@samfeldstein.xyz">email me</a
+    href=`mailto:${site.author.email}`>email me</a
   >.
 </p>
