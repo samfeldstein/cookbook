@@ -1,12 +1,10 @@
 ---
 import Base from "@/layouts/Base.astro";
+import Tags from "@/components/Tags.astro";
+
 import { getCollection } from "astro:content";
 
-// Functions
-import { sortCollectionByDate } from "../scripts/utils";
-
 const recipes = await getCollection("recipes");
-const recent = sortCollectionByDate(recipes).slice(0, 3);
 
 const tags = [...new Set(recipes.map((recipe) => recipe.data.tags).flat())];
 tags.sort();
@@ -14,18 +12,21 @@ tags.sort();
 
 <Base title="Home">
   <h1>Cookbook</h1>
-  <section class="new">
-    <h2>New Recipes</h2>
-    <ul>
-      {
-        recent.map((recipe) => (
-          <li>
-            <a class="new" href={`/recipes/${recipe.id}`}>
-              {recipe.data.title}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+  <Tags tags={tags} path="recipes" />
 </Base>
+
+<style is:global lang="scss">
+  .tags {
+    list-style-type: none;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    li {
+      padding: 0.5rem 0;
+    }
+  }
+</style>
