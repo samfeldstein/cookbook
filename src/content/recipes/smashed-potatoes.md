@@ -1,6 +1,6 @@
 ---
 title: Smashed Potatoes
-pubDate: 2024-05-05
+created: 2024-05-05
 tags:
   - potatoes
 source:

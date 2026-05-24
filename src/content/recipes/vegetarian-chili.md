@@ -1,6 +1,6 @@
 ---
 title: Vegetarian Chili
-pubDate: 2025-11-20
+created: 2025-11-20
 tags:
   - vegetarian
   - soup

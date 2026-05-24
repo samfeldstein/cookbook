@@ -27,14 +27,6 @@ const { Content } = await render(recipe);
 </Base>
 
 <style is:global lang="scss">
-  h2 {
-    margin-top: 2em;
-
-    font-weight: 400;
-    font-size: 1.25em;
-
-    text-align: center;
-  }
 
   // Only add space between items, excl first
   .recipe-content {
@@ -45,6 +37,8 @@ const { Content } = await render(recipe);
 
   strong {
     font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
   }
 
   .footnotes {

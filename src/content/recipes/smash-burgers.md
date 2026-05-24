@@ -1,6 +1,6 @@
 ---
 title: Smash Burgers
-pubDate: 2024-12-27
+created: 2024-12-27
 tags:
   - beef
 ---
