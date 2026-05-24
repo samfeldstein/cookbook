@@ -5,10 +5,11 @@ tags:
   - drinks
 ---
 
-1. Mix **lemon zest** with **sugar**.
-2. Add water, bring to a boil, strain.
-3. Mix 1 part lemon juice with 1 part syrup.
-4. Add water.
+1. Zest **4 lemons**.
+2. Mix zest with **1 c sugar**.
+3. Add **1 c water**, bring to a boil, strain.
+4. Mix 1 part lemon juice with 1 part syrup.
+5. Add water.
 
 ## Notes
 
