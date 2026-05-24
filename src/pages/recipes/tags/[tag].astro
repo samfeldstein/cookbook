@@ -1,9 +1,6 @@
 ---
 // Layout
-import Base from "../../../layouts/Base.astro";
-
-// Styles
-import "../../../styles/_tag.scss";
+import Base from "@/layouts/Base.astro";
 
 // Collections
 import { getCollection } from "astro:content";
@@ -51,3 +48,11 @@ const { recipes } = Astro.props;
     }
   </ul>
 </Base>
+
+<style>
+  ul {
+    list-style-type: circle;
+    display: grid;
+    gap: 0.5em;
+  }
+</style>
