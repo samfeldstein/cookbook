@@ -13,8 +13,8 @@ tags:
 5. Preheat a skillet over high heat.
 6. Cook marinated chicken on both sides until nicely golden brown and cooked through.[^2]
 7. Remove from skillet, let cool slightly, then slice.
-8. Top a **small Sonora-style flour tortilla**[^3] with **Monterey Jack** and **sharp cheddar cheese**, sliced chicken, then more cheese. Cover with another tortilla and press flat as you can.
-9. Heat vegetable oil in a skillet over medium heat.
+8. Top a **small flour tortilla**[^3] with **Monterey Jack** and **sharp cheddar cheese**, sliced chicken, then more cheese. Cover with another tortilla and press flat as you can.
+9. Heat vegetable oil in a skillet over medium-low heat.
 10. Cook quesadillas till golden brown on each side.
 11. Serve with **guac**, **salsa**, and **sour cream**.
 
@@ -24,4 +24,4 @@ Original recipe from [Babish](https://youtu.be/E0G5Y2SOW0c?si=ookqQGRH8EXy4vle).
 
 [^1]: Helps them cook evenly.
 [^2]: Chicken very smoky, though maybe because I was using a steel skillet. Try nonstick or oven next time. If oven, could try broiling at the end for crisp?
-[^3]: Sonora-style crisp up fast.
+[^3]: I like Sonora-style because they crisp up fast. If using a thicker torilla, you may have to turn up the heat.
