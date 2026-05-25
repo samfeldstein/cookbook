@@ -4,6 +4,6 @@ export const site = {
   url: "https://cookbook.samfeldstein.xyz/",
   author: {
     name: "Sam Feldstein",
-    email: "samfeldstein@proton.me",
+    email: "samfeldstein@pm.me",
   }
 };
