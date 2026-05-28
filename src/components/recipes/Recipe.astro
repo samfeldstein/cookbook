@@ -1,3 +1,17 @@
 <section id="recipe">
-  <slot/>
+  <slot />
 </section>
+
+<style lang="scss" is:global>
+  @media screen and (min-width: 768px) {
+    #recipe ol {
+      column-count: 2;
+      gap: 4em;
+
+      li {
+        // Prevent list items from wrapping into next column
+        break-inside: avoid;
+      }
+    }
+  }
+</style>

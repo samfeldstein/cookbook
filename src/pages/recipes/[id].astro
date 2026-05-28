@@ -22,9 +22,7 @@ const { Content } = await render(recipe);
 
 <Base title={recipe.data.title}>
   <Header title={recipe.data.title} tags={recipe.data.tags} />
-  <div class="recipe">
     <Content components={components} />
-  </div>
 </Base>
 
 <style is:global lang="scss">
@@ -41,47 +39,7 @@ const { Content } = await render(recipe);
   li {
     margin-bottom: 0.5em;
   }
-
-  .footnotes {
-    margin-top: 4rem;
-    border-top: 1px dashed currentColor;
-
-    font-size: 0.8em;
-
-    h2 {
-      visibility: hidden;
-      position: absolute;
-    }
-
-    ol {
-      p {
-        margin: 0;
-      }
-    }
-  }
-
-  sup {
-    a {
-      font-size: 0.65em;
-      font-weight: 400;
-      padding: 0.2em;
-    }
-  }
-
-  // Desktop styles
-  @media screen and (min-width: 768px) {
-    div.recipe {
-      ol:not(.footnotes ol) {
-        column-count: 2;
-        gap: 4em;
-
-        li {
-          // Prevent list items from wrapping into next column
-          break-inside: avoid;
-        }
-      }
-    }
-  }
+  
 </style>
 
 <script>
