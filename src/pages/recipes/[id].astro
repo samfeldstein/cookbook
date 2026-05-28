@@ -3,6 +3,7 @@ import Base from "@/layouts/Base.astro";
 
 import Header from "@/components/recipes/Header.astro";
 
+import { components } from "@/components/global";
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
 
@@ -22,7 +23,7 @@ const { Content } = await render(recipe);
 <Base title={recipe.data.title}>
   <Header title={recipe.data.title} tags={recipe.data.tags} />
   <div class="recipe">
-    <Content />
+    <Content components={components} />
   </div>
 </Base>
 
@@ -70,9 +71,14 @@ const { Content } = await render(recipe);
   // Desktop styles
   @media screen and (min-width: 768px) {
     div.recipe {
-      ol {
+      ol:not(.footnotes ol) {
         column-count: 2;
         gap: 4em;
+
+        li {
+          // Prevent list items from wrapping into next column
+          break-inside: avoid;
+        }
       }
     }
   }
