@@ -1,0 +1,27 @@
+---
+title: Slow Cooker Chicken Tacos
+created: 2026-02-20
+tags:
+  - chicken
+  - mexican
+  - slow-cooker
+  - easy
+---
+
+1. Add **1 chicken breast**, **2 chicken thighs**, **1 c salsa**, **1/2 c water**, **2 tsp cumin**, **2 tsp chili powder**, **1 tsp garlic powder**, **1 tsp coriander**, **1/2 tsp salt**, **1/4 tsp cayenne**, and **1 tsp black pepper** to a slow cooker.
+2. Cook on high 4-5 hrs.
+3. Shred chicken.
+4. Add a **handful of spinach**.[^1]
+5. Cook on low another 30 mins.
+
+## Notes
+
+Suggested toppings:
+
+- **Sour cream**
+- **Cheese**
+- **Avocado**
+
+Original recipe from [The Real Food Dietitians](https://therealfooddietitians.com/slow-cooker-chicken-tacos/).
+
+[^1]: Gross, I know, but you won't notice it and it's good for you.
