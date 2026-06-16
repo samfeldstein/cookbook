@@ -9,7 +9,7 @@ async function requestWakeLock() {
 }
 
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible") {
+  if (document.visibilityState === "visible" && !wakeLock) {
     requestWakeLock();
   }
 });
