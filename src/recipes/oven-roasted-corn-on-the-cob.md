@@ -7,9 +7,10 @@ tags:
 
 1. Preheat oven to 450.
 2. Shuck and de-silk the **corn**.
-3. **Butter**, **salt**, **pepper**.
-4. Wrap in **foil**.
-5. Roast 25 mins.
+3. Melt some **butter,** brush it on the corn.
+4. **Salt** and **pepper**.
+5. Wrap in **foil**.
+6. Roast 25 mins.
 
 ## Notes
 
