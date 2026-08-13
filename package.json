@@ -10,12 +10,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^6.0.3",
-    "astro": "^6.4.7",
+    "@astrojs/mdx": "^7.0.5",
+    "astro": "^7.2.2",
     "autoprefixer": "^10.4.20",
     "sass": "^1.86.0"
   },
   "devDependencies": {
     "cssnano": "^7.0.4"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.5.1": true,
+    "fsevents@2.3.3": true,
+    "sharp@0.34.4": true,
+    "esbuild@0.28.2": true
   }
 }
